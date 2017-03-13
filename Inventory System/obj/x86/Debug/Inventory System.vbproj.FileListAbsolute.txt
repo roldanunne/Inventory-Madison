@@ -1,0 +1,69 @@
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\bin\Debug\Inventory System.exe
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\bin\Debug\Inventory System.pdb
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\bin\Debug\Inventory System.xml
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmLogin.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.Resources.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory System.pdb
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmMain.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmAccount.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmProducts.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmStockIn.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmStockOut.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmNewProduct.resources
+C:\Users\R9soft\Desktop\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\Users\R9soft\Desktop\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\Users\R9soft\Desktop\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.pdb
+F:\mike\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.exe
+F:\mike\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.xml
+F:\mike\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.pdb
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory System.pdb
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\bin\Debug\Inventory System.exe
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\bin\Debug\Inventory System.pdb
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\bin\Debug\Inventory System.xml
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmCancelationDelivery.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmEmployee.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmLogin.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmMain.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmProductProperties.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmProducts.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmDelivery.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmSearchProduct.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmStockIn.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.mdiMain.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.Resources.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.popLogFiles.resources
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\OHF\Documents\Visual Studio 2010\Projects\Roldan\Inventory System\Inventory System\obj\x86\Debug\GenerateResource.write.1.tlog
+\\OHF-PC\Users\Public\Inventory System\Inventory System\obj\x86\Debug\Inventory System.exe
+\\OHF-PC\Users\Public\Inventory System\Inventory System\obj\x86\Debug\Inventory System.xml
+\\OHF-PC\Users\Public\Inventory System\Inventory System\obj\x86\Debug\Inventory System.pdb
+C:\VB.Net Project\Inventory System\Inventory System\bin\Debug\Inventory System.exe
+C:\VB.Net Project\Inventory System\Inventory System\bin\Debug\Inventory System.pdb
+C:\VB.Net Project\Inventory System\Inventory System\bin\Debug\Inventory System.xml
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmCancelationDelivery.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmEmployee.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmLogin.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmMain.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmProductProperties.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmProducts.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmDelivery.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmSearchProduct.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.frmStockIn.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.mdiMain.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.Resources.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory_System.popLogFiles.resources
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory System.vbproj.GenerateResource.Cache
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\VB.Net Project\Inventory System\Inventory System\obj\x86\Debug\Inventory System.pdb
+C:\VB.Net Project\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\VB.Net Project\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\VB.Net Project\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.pdb
