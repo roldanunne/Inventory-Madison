@@ -28,6 +28,9 @@ Partial Class mdiMain
         Me.pnlSideMenu = New System.Windows.Forms.Panel()
         Me.btnNavMax = New System.Windows.Forms.Button()
         Me.pnlSideNav = New System.Windows.Forms.Panel()
+        Me.btnRack = New System.Windows.Forms.Button()
+        Me.btnSupplier = New System.Windows.Forms.Button()
+        Me.btnBranch = New System.Windows.Forms.Button()
         Me.btnHome = New System.Windows.Forms.Button()
         Me.btnEmployee = New System.Windows.Forms.Button()
         Me.btnProducts = New System.Windows.Forms.Button()
@@ -90,6 +93,9 @@ Partial Class mdiMain
         'pnlSideNav
         '
         Me.pnlSideNav.BackColor = System.Drawing.Color.Transparent
+        Me.pnlSideNav.Controls.Add(Me.btnRack)
+        Me.pnlSideNav.Controls.Add(Me.btnSupplier)
+        Me.pnlSideNav.Controls.Add(Me.btnBranch)
         Me.pnlSideNav.Controls.Add(Me.btnHome)
         Me.pnlSideNav.Controls.Add(Me.btnEmployee)
         Me.pnlSideNav.Controls.Add(Me.btnProducts)
@@ -100,6 +106,81 @@ Partial Class mdiMain
         Me.pnlSideNav.Name = "pnlSideNav"
         Me.pnlSideNav.Size = New System.Drawing.Size(210, 653)
         Me.pnlSideNav.TabIndex = 11
+        '
+        'btnRack
+        '
+        Me.btnRack.BackColor = System.Drawing.Color.Transparent
+        Me.btnRack.BackgroundImage = CType(resources.GetObject("btnRack.BackgroundImage"), System.Drawing.Image)
+        Me.btnRack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnRack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRack.FlatAppearance.BorderSize = 0
+        Me.btnRack.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnRack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnRack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnRack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRack.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRack.ForeColor = System.Drawing.Color.White
+        Me.btnRack.Image = Global.Inventory_System.My.Resources.Resources.rack
+        Me.btnRack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRack.Location = New System.Drawing.Point(0, 229)
+        Me.btnRack.Name = "btnRack"
+        Me.btnRack.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
+        Me.btnRack.Size = New System.Drawing.Size(210, 58)
+        Me.btnRack.TabIndex = 10
+        Me.btnRack.Text = "   &Rack"
+        Me.btnRack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnRack.UseVisualStyleBackColor = False
+        Me.btnRack.Visible = False
+        '
+        'btnSupplier
+        '
+        Me.btnSupplier.BackColor = System.Drawing.Color.Transparent
+        Me.btnSupplier.BackgroundImage = CType(resources.GetObject("btnSupplier.BackgroundImage"), System.Drawing.Image)
+        Me.btnSupplier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSupplier.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSupplier.FlatAppearance.BorderSize = 0
+        Me.btnSupplier.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnSupplier.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnSupplier.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSupplier.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSupplier.ForeColor = System.Drawing.Color.White
+        Me.btnSupplier.Image = Global.Inventory_System.My.Resources.Resources.factory
+        Me.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSupplier.Location = New System.Drawing.Point(0, 117)
+        Me.btnSupplier.Name = "btnSupplier"
+        Me.btnSupplier.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
+        Me.btnSupplier.Size = New System.Drawing.Size(210, 58)
+        Me.btnSupplier.TabIndex = 9
+        Me.btnSupplier.Text = "   &Supplier"
+        Me.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSupplier.UseVisualStyleBackColor = False
+        Me.btnSupplier.Visible = False
+        '
+        'btnBranch
+        '
+        Me.btnBranch.BackColor = System.Drawing.Color.Transparent
+        Me.btnBranch.BackgroundImage = CType(resources.GetObject("btnBranch.BackgroundImage"), System.Drawing.Image)
+        Me.btnBranch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBranch.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBranch.FlatAppearance.BorderSize = 0
+        Me.btnBranch.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.btnBranch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnBranch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBranch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBranch.ForeColor = System.Drawing.Color.White
+        Me.btnBranch.Image = Global.Inventory_System.My.Resources.Resources.shop
+        Me.btnBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBranch.Location = New System.Drawing.Point(0, 173)
+        Me.btnBranch.Name = "btnBranch"
+        Me.btnBranch.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
+        Me.btnBranch.Size = New System.Drawing.Size(210, 58)
+        Me.btnBranch.TabIndex = 8
+        Me.btnBranch.Text = "   &Branch"
+        Me.btnBranch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnBranch.UseVisualStyleBackColor = False
+        Me.btnBranch.Visible = False
         '
         'btnHome
         '
@@ -144,7 +225,7 @@ Partial Class mdiMain
         Me.btnEmployee.Location = New System.Drawing.Point(0, 61)
         Me.btnEmployee.Name = "btnEmployee"
         Me.btnEmployee.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
-        Me.btnEmployee.Size = New System.Drawing.Size(209, 58)
+        Me.btnEmployee.Size = New System.Drawing.Size(210, 58)
         Me.btnEmployee.TabIndex = 3
         Me.btnEmployee.Text = "   &Employee"
         Me.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -166,7 +247,7 @@ Partial Class mdiMain
         Me.btnProducts.ForeColor = System.Drawing.Color.White
         Me.btnProducts.Image = CType(resources.GetObject("btnProducts.Image"), System.Drawing.Image)
         Me.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnProducts.Location = New System.Drawing.Point(0, 117)
+        Me.btnProducts.Location = New System.Drawing.Point(0, 285)
         Me.btnProducts.Name = "btnProducts"
         Me.btnProducts.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
         Me.btnProducts.Size = New System.Drawing.Size(209, 58)
@@ -191,7 +272,7 @@ Partial Class mdiMain
         Me.btnStocks.ForeColor = System.Drawing.Color.White
         Me.btnStocks.Image = CType(resources.GetObject("btnStocks.Image"), System.Drawing.Image)
         Me.btnStocks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnStocks.Location = New System.Drawing.Point(0, 173)
+        Me.btnStocks.Location = New System.Drawing.Point(0, 341)
         Me.btnStocks.Name = "btnStocks"
         Me.btnStocks.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
         Me.btnStocks.Size = New System.Drawing.Size(209, 58)
@@ -216,7 +297,7 @@ Partial Class mdiMain
         Me.btnDelivery.ForeColor = System.Drawing.Color.White
         Me.btnDelivery.Image = CType(resources.GetObject("btnDelivery.Image"), System.Drawing.Image)
         Me.btnDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDelivery.Location = New System.Drawing.Point(0, 229)
+        Me.btnDelivery.Location = New System.Drawing.Point(0, 397)
         Me.btnDelivery.Name = "btnDelivery"
         Me.btnDelivery.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
         Me.btnDelivery.Size = New System.Drawing.Size(209, 58)
@@ -241,7 +322,7 @@ Partial Class mdiMain
         Me.btnReport.ForeColor = System.Drawing.Color.White
         Me.btnReport.Image = Global.Inventory_System.My.Resources.Resources.ic_report
         Me.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnReport.Location = New System.Drawing.Point(0, 285)
+        Me.btnReport.Location = New System.Drawing.Point(0, 453)
         Me.btnReport.Name = "btnReport"
         Me.btnReport.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
         Me.btnReport.Size = New System.Drawing.Size(209, 58)
@@ -319,5 +400,8 @@ Partial Class mdiMain
     Friend WithEvents btnDelivery As System.Windows.Forms.Button
     Friend WithEvents btnStocks As System.Windows.Forms.Button
     Friend WithEvents pnlSideNav As System.Windows.Forms.Panel
+    Friend WithEvents btnBranch As System.Windows.Forms.Button
+    Friend WithEvents btnSupplier As System.Windows.Forms.Button
+    Friend WithEvents btnRack As System.Windows.Forms.Button
 
 End Class

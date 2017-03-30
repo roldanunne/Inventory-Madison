@@ -102,6 +102,18 @@
   <ItemGroup>
     <Compile Include="Code128Content.vb" />
     <Compile Include="Code128Rendering.vb" />
+    <Compile Include="frmAdjustment.Designer.vb">
+      <DependentUpon>frmAdjustment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdjustment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranch.designer.vb">
+      <DependentUpon>frmBranch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCancelationDelivery.designer.vb">
       <DependentUpon>frmCancelationDelivery.vb</DependentUpon>
     </Compile>
@@ -114,16 +126,34 @@
     <Compile Include="frmProductProperties.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmProducts.Designer.vb">
+      <DependentUpon>frmProducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRack.Designer.vb">
+      <DependentUpon>frmRack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRack.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSearchProduct.Designer.vb">
       <DependentUpon>frmSearchProduct.vb</DependentUpon>
     </Compile>
     <Compile Include="frmSearchProduct.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStockIn.Designer.vb">
-      <DependentUpon>frmStockIn.vb</DependentUpon>
+    <Compile Include="frmStocks.Designer.vb">
+      <DependentUpon>frmStocks.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmStockIn.vb">
+    <Compile Include="frmStocks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modEmployeeCtlr.vb" />
@@ -145,12 +175,6 @@
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProducts.Designer.vb">
-      <DependentUpon>frmProducts.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmProducts.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmDelivery.Designer.vb">
       <DependentUpon>frmDelivery.vb</DependentUpon>
     </Compile>
@@ -167,6 +191,7 @@
     <Compile Include="modFormFuction.vb" />
     <Compile Include="modLoginCtlr.vb" />
     <Compile Include="modSqlFunction.vb" />
+    <Compile Include="modStocksCtlr.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -188,9 +213,21 @@
     <Compile Include="popLogFiles.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmProductRackLevel.Designer.vb">
+      <DependentUpon>frmProductRackLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductRackLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Rfc4810Writer.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAdjustment.resx">
+      <DependentUpon>frmAdjustment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBranch.resx">
+      <DependentUpon>frmBranch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCancelationDelivery.resx">
       <DependentUpon>frmCancelationDelivery.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,17 +243,23 @@
     <EmbeddedResource Include="frmProductProperties.resx">
       <DependentUpon>frmProductProperties.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDelivery.resx">
+      <DependentUpon>frmDelivery.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProducts.resx">
       <DependentUpon>frmProducts.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDelivery.resx">
-      <DependentUpon>frmDelivery.vb</DependentUpon>
+    <EmbeddedResource Include="frmRack.resx">
+      <DependentUpon>frmRack.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchProduct.resx">
       <DependentUpon>frmSearchProduct.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStockIn.resx">
-      <DependentUpon>frmStockIn.vb</DependentUpon>
+    <EmbeddedResource Include="frmStocks.resx">
+      <DependentUpon>frmStocks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiMain.resx">
       <DependentUpon>mdiMain.vb</DependentUpon>
@@ -229,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="popLogFiles.resx">
       <DependentUpon>popLogFiles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductRackLevel.resx">
+      <DependentUpon>frmProductRackLevel.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -489,6 +535,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\noImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-fast-forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-house %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server-cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

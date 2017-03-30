@@ -26,7 +26,6 @@ Partial Class frmSearchProduct
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dgvSearchProduct = New System.Windows.Forms.DataGridView()
         Me.prod_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.barcode = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,7 +33,6 @@ Partial Class frmSearchProduct
         Me.prod_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prod_class = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,19 +58,12 @@ Partial Class frmSearchProduct
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(17, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(232, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Search Product :"
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.dgvSearchProduct)
-        Me.Panel2.Location = New System.Drawing.Point(12, 94)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(701, 367)
-        Me.Panel2.TabIndex = 1
         '
         'dgvSearchProduct
         '
@@ -86,13 +77,14 @@ Partial Class frmSearchProduct
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvSearchProduct.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvSearchProduct.ColumnHeadersHeight = 40
+        Me.dgvSearchProduct.ColumnHeadersHeight = 30
         Me.dgvSearchProduct.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prod_id, Me.barcode, Me.prod_name, Me.prod_desc, Me.prod_class})
-        Me.dgvSearchProduct.Location = New System.Drawing.Point(3, 3)
+        Me.dgvSearchProduct.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvSearchProduct.Location = New System.Drawing.Point(0, 108)
         Me.dgvSearchProduct.Name = "dgvSearchProduct"
         Me.dgvSearchProduct.ReadOnly = True
-        Me.dgvSearchProduct.Size = New System.Drawing.Size(695, 361)
-        Me.dgvSearchProduct.TabIndex = 0
+        Me.dgvSearchProduct.Size = New System.Drawing.Size(724, 363)
+        Me.dgvSearchProduct.TabIndex = 1
         '
         'prod_id
         '
@@ -137,17 +129,16 @@ Partial Class frmSearchProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(730, 473)
-        Me.Controls.Add(Me.Panel2)
+        Me.ClientSize = New System.Drawing.Size(724, 471)
+        Me.Controls.Add(Me.dgvSearchProduct)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmSearchProduct"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "    Search Product Here"
         Me.TopMost = True
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
         CType(Me.dgvSearchProduct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -155,7 +146,6 @@ Partial Class frmSearchProduct
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents dgvSearchProduct As System.Windows.Forms.DataGridView
     Friend WithEvents prod_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents barcode As System.Windows.Forms.DataGridViewTextBoxColumn

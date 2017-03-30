@@ -2,6 +2,7 @@
     Private profilePath = imgPath & "\profile"
 
     Private Sub frmEmployee_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        
         If Len(Dir(profilePath, vbDirectory)) = 0 Then
             MkDir(profilePath)
         End If
@@ -65,17 +66,26 @@
         If chkEmployee.Checked Then
             menus &= "1,"
         End If
-        If chkProducts.Checked Then
+        If chkSupplier.Checked Then
             menus &= "2,"
         End If
-        If chkStocks.Checked Then
+        If chkBranch.Checked Then
             menus &= "3,"
         End If
-        If chkDelivery.Checked Then
+        If chkRack.Checked Then
             menus &= "4,"
         End If
-        If chkReport.Checked Then
+        If chkProducts.Checked Then
             menus &= "5,"
+        End If
+        If chkStocks.Checked Then
+            menus &= "6,"
+        End If
+        If chkDelivery.Checked Then
+            menus &= "7,"
+        End If
+        If chkReport.Checked Then
+            menus &= "8,"
         End If
         Return menus
     End Function
@@ -148,12 +158,18 @@
                 If item = "1" Then
                     chkEmployee.Checked = True
                 ElseIf item = "2" Then
-                    chkProducts.Checked = True
+                    chkSupplier.Checked = True
                 ElseIf item = "3" Then
-                    chkStocks.Checked = True
+                    chkBranch.Checked = True
                 ElseIf item = "4" Then
-                    chkDelivery.Checked = True
+                    chkRack.Checked = True
                 ElseIf item = "5" Then
+                    chkProducts.Checked = True
+                ElseIf item = "6" Then
+                    chkStocks.Checked = True
+                ElseIf item = "7" Then
+                    chkDelivery.Checked = True
+                ElseIf item = "8" Then
                     chkReport.Checked = True
                 End If
             Next
@@ -200,4 +216,8 @@
         End If
     End Sub
 
+    Private Sub txtSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearch.TextChanged
+        Dim strQry As String = "SELECT id, fname, lname, gender, address, user_access, username, password, status, IF(status = 0, 'Inactive', 'Active') AS stat FROM employee WHERE delete_flag=0 AND fname LIKE '%" & txtSearch.Text & "%' OR lname LIKE '%" & txtSearch.Text & "%' OR gender LIKE '%" & txtSearch.Text & "%' OR address LIKE '%" & txtSearch.Text & "%' "
+        modSqlFunction.loadDataGrid(strQry, dgvEmployee)
+    End Sub
 End Class

@@ -110,5 +110,19 @@ Module modSqlFunction
             MessageBox.Show(ex.Message & "Database Update Error")
         End Try
     End Sub
-    
+
+
+    'newly added
+    Public Sub loadDataGrid(ByVal strQuery As String, ByVal dgView As DataGridView)
+        Try
+            OpenCon()
+            Dim mydataAdapter As New MySqlDataAdapter(strQuery, dbCon)
+            Dim myDataTable As New DataTable
+            mydataAdapter.Fill(myDataTable)
+            dgView.DataSource = myDataTable
+        Catch ex As Exception
+            MessageBox.Show(ex.Message & "Database Update Error")
+        End Try
+    End Sub
+
 End Module

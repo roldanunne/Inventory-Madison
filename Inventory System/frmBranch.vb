@@ -13,21 +13,18 @@ Public Class frmBranch
     Private Sub loadData()
 
         modSqlFunction.loadData("branch", " branch_code,branch_name,branch_address,branch_contact", dvgBranch)
-        With dvgBranch
-            .Columns(0).DataPropertyName = "branch_code"
-            .Columns(1).DataPropertyName = "branch_name"
-            .Columns(2).DataPropertyName = "branch_address"
-            .Columns(3).DataPropertyName = "branch_contact"
-            .DataSource = dvgBranch.DataSource
-        End With
+        
     End Sub
     Private Sub setFrmDefault()
-        modFormFunction.setClearAll(Me)
+        modFormFuction.setClearAll(Me)
         pnlBranchData.Enabled = False
         pnlBrachGrid.Enabled = True
         txtSearchBranch.Select()
-        btnAddBranch.Text = "&NEW"
-        btnAddBranch.Image = My.Resources.Resources._1487714481_plus
+        btnDelete.Text = "&Delete"
+        btnDelete.BackColor = Color.Coral
+        btnAddBranch.Text = "&New"
+        btnAddBranch.Image = My.Resources.Resources.plus_house
+        btnAddBranch.BackColor = Color.ForestGreen
 
     End Sub
     Public Sub generateBranchNumber()
@@ -38,7 +35,7 @@ Public Class frmBranch
         Dim strpos = ""
         Try
             OpenCon()
-            While count <= 10
+            While count <= 8
                 strpos = cc.Next(0, pool.Length)
                 Code = Code & pool(strpos)
                 count = count + 1
@@ -65,15 +62,19 @@ Public Class frmBranch
     End Sub
 
     Private Sub btnAddBranch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddBranch.Click
-        If btnAddBranch.Text = "&NEW" Then
-            modFormFunction.setClearAll(Me)
+        If btnAddBranch.Text = "&New" Then
+            btnDelete.Text = "&Cancel"
+            btnDelete.BackColor = Color.IndianRed
+            modFormFuction.setClearAll(Me)
             generateBranchNumber()
             pnlBranchData.Enabled = True
             pnlBrachGrid.Enabled = False
-            btnAddBranch.Text = "&SAVE"
-            btnAddBranch.Image = My.Resources.Resources._1487710265_floppy
-        ElseIf btnAddBranch.Text = "&SAVE" Then
-            If modFormFunction.setIsTextEmpty(Me.pnlBranchData) = True Then
+            btnAddBranch.Text = "&Save"
+            btnAddBranch.BackColor = Color.FromArgb(51, 122, 183)
+            btnAddBranch.Image = My.Resources.Resources.check_house
+        ElseIf btnAddBranch.Text = "&Save" Then
+            btnAddBranch.BackColor = Color.RoyalBlue
+            If modFormFuction.setIsTextEmpty(Me.pnlBranchData) = True Then
                 MessageBox.Show("Please fill all records.", "ERROR MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ElseIf modSqlFunction.searchData("branch", "branch_name", txtBranchCode.Text) = True Then
                 MessageBox.Show("This Branch already exist...")
@@ -91,7 +92,7 @@ Public Class frmBranch
                 CloseCon()
                 Me.setFrmDefault()
             End If
-        ElseIf btnAddBranch.Text = "&UPDATE" Then
+        ElseIf btnAddBranch.Text = "&Update" Then
             Try
                 OpenCon()
 
@@ -124,35 +125,36 @@ Public Class frmBranch
             If MessageBox.Show("Do you want to change something is this record?", "Product Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
                 pnlBranchData.Enabled = True
 
-                btnAddBranch.Text = "&UPDATE"
-                btnAddBranch.Image = My.Resources.Resources.update
+                btnDelete.Text = "&Cancel"
+                btnDelete.BackColor = Color.IndianRed
+                btnAddBranch.Text = "&Update"
+                btnAddBranch.Image = My.Resources.Resources.check_house
+
             End If
         Else
             Me.setFrmDefault()
         End If
     End Sub
 
-    Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
-        Me.setFrmDefault()
-    End Sub
-
     Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
-        If MessageBox.Show("Do You Want to DELETE this Record...?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
-            modSqlFunction.deleteData("branch", "branch_code", txtBranchCode.Text)
+        If btnDelete.Text = "&Delete" Then
+            If Not txtBranchCode.Text = Nothing Then
+                If MessageBox.Show("Do You Want to DELETE this Record...?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
+                    modSqlFunction.deleteData("branch", "branch_code", txtBranchCode.Text)
+                    Me.setFrmDefault()
+                    loadData()
+                End If
+            Else
+                MsgBox("Please select a record")
+            End If
+        ElseIf btnDelete.Text = "&Cancel" Then
             Me.setFrmDefault()
-            loadData()
         End If
     End Sub
 
     Private Sub txtSearchBranch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearchBranch.TextChanged
-        modSqlFunction.loadData("branch WHERE branch_name LIKE '%" & txtSearchBranch.Text & "%' or branch_code LIKE '%" & txtSearchBranch.Text & "%'", "branch_code,branch_name,branch_address,branch_contact", dvgBranch)
-        With dvgBranch
-            .Columns(0).DataPropertyName = "branch_code"
-            .Columns(1).DataPropertyName = "branch_name"
-            .Columns(2).DataPropertyName = "branch_address"
-            .Columns(3).DataPropertyName = "branch_contact"
-            .DataSource = dvgBranch.DataSource
-        End With
+        modSqlFunction.loadData("branch WHERE branch_name LIKE '%" & txtSearchBranch.Text & "%' or branch_code LIKE '%" & txtSearchBranch.Text & "%' or branch_address LIKE '%" & txtSearchBranch.Text & "%'", "branch_code,branch_name,branch_address,branch_contact", dvgBranch)
+        
     End Sub
     Private Sub txtBranchContact_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtBranchContact.KeyPress
         If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
@@ -165,8 +167,4 @@ Public Class frmBranch
         txtBranchContact.Text = digitsOnly.Replace(txtBranchContact.Text, "")
     End Sub
 
-
-    Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
 End Class

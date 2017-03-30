@@ -15,6 +15,14 @@ InventorySystem
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Inventory_System.My.Resources.Resources._001_rewind">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources._002_fast_forward">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Inventory_System.My.Resources.Resources._1487710265_floppy">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -79,7 +87,19 @@ InventorySystem
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.cart_cancel1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Inventory_System.My.Resources.Resources.cart_check">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.cart_delete">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.cart_download">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -87,7 +107,23 @@ InventorySystem
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.cart_new">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.cart_save">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Inventory_System.My.Resources.Resources.cart_search">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.cart_upload">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.check_house">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -100,6 +136,14 @@ InventorySystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Inventory_System.My.Resources.Resources.employee">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.factory">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.folder">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -139,11 +183,39 @@ InventorySystem
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.minus_house">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Inventory_System.My.Resources.Resources.noImage">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Inventory_System.My.Resources.Resources.open_folder">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.play_button">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.play_button__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.plus_house">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.previous">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.rack">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.remove">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -155,7 +227,35 @@ InventorySystem
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.server_add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.server_cancel">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.server_check">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.settings">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.shop">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Inventory_System.My.Resources.Resources.side_menu">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.skip">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Inventory_System.My.Resources.Resources.skip__1_">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -55,6 +55,9 @@ Partial Class frmEmployee
         Me.txtFName = New System.Windows.Forms.TextBox()
         Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.gbxMenus = New System.Windows.Forms.GroupBox()
+        Me.chkRack = New System.Windows.Forms.CheckBox()
+        Me.chkBranch = New System.Windows.Forms.CheckBox()
+        Me.chkSupplier = New System.Windows.Forms.CheckBox()
         Me.chkReport = New System.Windows.Forms.CheckBox()
         Me.chkDelivery = New System.Windows.Forms.CheckBox()
         Me.chkStocks = New System.Windows.Forms.CheckBox()
@@ -320,7 +323,7 @@ Partial Class frmEmployee
         Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Items.AddRange(New Object() {"Active", "Inactive"})
+        Me.cmbStatus.Items.AddRange(New Object() {"Active, 1", "Inactive, 0"})
         Me.cmbStatus.Location = New System.Drawing.Point(458, 119)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(142, 28)
@@ -424,6 +427,9 @@ Partial Class frmEmployee
         '
         'gbxMenus
         '
+        Me.gbxMenus.Controls.Add(Me.chkRack)
+        Me.gbxMenus.Controls.Add(Me.chkBranch)
+        Me.gbxMenus.Controls.Add(Me.chkSupplier)
         Me.gbxMenus.Controls.Add(Me.chkReport)
         Me.gbxMenus.Controls.Add(Me.chkDelivery)
         Me.gbxMenus.Controls.Add(Me.chkStocks)
@@ -432,17 +438,47 @@ Partial Class frmEmployee
         Me.gbxMenus.Enabled = False
         Me.gbxMenus.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbxMenus.ForeColor = System.Drawing.Color.White
-        Me.gbxMenus.Location = New System.Drawing.Point(32, 210)
+        Me.gbxMenus.Location = New System.Drawing.Point(32, 200)
         Me.gbxMenus.Name = "gbxMenus"
-        Me.gbxMenus.Size = New System.Drawing.Size(616, 74)
+        Me.gbxMenus.Size = New System.Drawing.Size(616, 84)
         Me.gbxMenus.TabIndex = 39
         Me.gbxMenus.TabStop = False
         Me.gbxMenus.Text = "Access Menus"
         '
+        'chkRack
+        '
+        Me.chkRack.AutoSize = True
+        Me.chkRack.Location = New System.Drawing.Point(191, 50)
+        Me.chkRack.Name = "chkRack"
+        Me.chkRack.Size = New System.Drawing.Size(103, 28)
+        Me.chkRack.TabIndex = 7
+        Me.chkRack.Text = "Products"
+        Me.chkRack.UseVisualStyleBackColor = True
+        '
+        'chkBranch
+        '
+        Me.chkBranch.AutoSize = True
+        Me.chkBranch.Location = New System.Drawing.Point(191, 25)
+        Me.chkBranch.Name = "chkBranch"
+        Me.chkBranch.Size = New System.Drawing.Size(103, 28)
+        Me.chkBranch.TabIndex = 6
+        Me.chkBranch.Text = "Products"
+        Me.chkBranch.UseVisualStyleBackColor = True
+        '
+        'chkSupplier
+        '
+        Me.chkSupplier.AutoSize = True
+        Me.chkSupplier.Location = New System.Drawing.Point(26, 50)
+        Me.chkSupplier.Name = "chkSupplier"
+        Me.chkSupplier.Size = New System.Drawing.Size(103, 28)
+        Me.chkSupplier.TabIndex = 5
+        Me.chkSupplier.Text = "Products"
+        Me.chkSupplier.UseVisualStyleBackColor = True
+        '
         'chkReport
         '
         Me.chkReport.AutoSize = True
-        Me.chkReport.Location = New System.Drawing.Point(496, 32)
+        Me.chkReport.Location = New System.Drawing.Point(497, 50)
         Me.chkReport.Name = "chkReport"
         Me.chkReport.Size = New System.Drawing.Size(85, 28)
         Me.chkReport.TabIndex = 4
@@ -452,7 +488,7 @@ Partial Class frmEmployee
         'chkDelivery
         '
         Me.chkDelivery.AutoSize = True
-        Me.chkDelivery.Location = New System.Drawing.Point(381, 32)
+        Me.chkDelivery.Location = New System.Drawing.Point(497, 25)
         Me.chkDelivery.Name = "chkDelivery"
         Me.chkDelivery.Size = New System.Drawing.Size(96, 28)
         Me.chkDelivery.TabIndex = 3
@@ -462,7 +498,7 @@ Partial Class frmEmployee
         'chkStocks
         '
         Me.chkStocks.AutoSize = True
-        Me.chkStocks.Location = New System.Drawing.Point(279, 32)
+        Me.chkStocks.Location = New System.Drawing.Point(344, 50)
         Me.chkStocks.Name = "chkStocks"
         Me.chkStocks.Size = New System.Drawing.Size(84, 28)
         Me.chkStocks.TabIndex = 2
@@ -472,7 +508,7 @@ Partial Class frmEmployee
         'chkProducts
         '
         Me.chkProducts.AutoSize = True
-        Me.chkProducts.Location = New System.Drawing.Point(160, 32)
+        Me.chkProducts.Location = New System.Drawing.Point(344, 25)
         Me.chkProducts.Name = "chkProducts"
         Me.chkProducts.Size = New System.Drawing.Size(103, 28)
         Me.chkProducts.TabIndex = 1
@@ -482,7 +518,7 @@ Partial Class frmEmployee
         'chkEmployee
         '
         Me.chkEmployee.AutoSize = True
-        Me.chkEmployee.Location = New System.Drawing.Point(27, 32)
+        Me.chkEmployee.Location = New System.Drawing.Point(26, 25)
         Me.chkEmployee.Name = "chkEmployee"
         Me.chkEmployee.Size = New System.Drawing.Size(115, 28)
         Me.chkEmployee.TabIndex = 0
@@ -637,7 +673,7 @@ Partial Class frmEmployee
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1207, 780)
+        Me.ClientSize = New System.Drawing.Size(1207, 772)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.pnlEmployeeList)
@@ -713,4 +749,7 @@ Partial Class frmEmployee
     Friend WithEvents stat As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents status As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents user_access As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents chkRack As System.Windows.Forms.CheckBox
+    Friend WithEvents chkBranch As System.Windows.Forms.CheckBox
+    Friend WithEvents chkSupplier As System.Windows.Forms.CheckBox
 End Class

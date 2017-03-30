@@ -237,5 +237,11 @@ Module modFormFuction
         lGr = Nothing
     End Sub
 
+    Public Function GetAutonumber(ByVal no As Integer) As String
+        Dim strNum = no.ToString()
+        Dim str = DateTime.Now.Year & DateTime.Now.Month.ToString("00") & New String("0", 5 - strNum.Length) & strNum
+        Return str
+    End Function
+
 End Module
 

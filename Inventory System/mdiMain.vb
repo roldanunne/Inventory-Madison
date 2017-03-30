@@ -14,15 +14,24 @@ Public Class mdiMain
                 btnEmployee.Visible = True
                 btnEmployee.Location = New Point(0, Location_control.Y)
             ElseIf item = "2" Then
+                btnSupplier.Visible = True
+                btnSupplier.Location = New Point(0, Location_control.Y)
+            ElseIf item = "3" Then
+                btnBranch.Visible = True
+                btnBranch.Location = New Point(0, Location_control.Y)
+            ElseIf item = "4" Then
+                btnRack.Visible = True
+                btnRack.Location = New Point(0, Location_control.Y)
+            ElseIf item = "5" Then
                 btnProducts.Visible = True
                 btnProducts.Location = New Point(0, Location_control.Y)
-            ElseIf item = "3" Then
+            ElseIf item = "6" Then
                 btnStocks.Visible = True
                 btnStocks.Location = New Point(0, Location_control.Y)
-            ElseIf item = "4" Then
+            ElseIf item = "7" Then
                 btnDelivery.Visible = True
                 btnDelivery.Location = New Point(0, Location_control.Y)
-            ElseIf item = "5" Then
+            ElseIf item = "8" Then
                 btnReport.Visible = True
                 btnReport.Location = New Point(0, Location_control.Y)
             End If
@@ -38,12 +47,18 @@ Public Class mdiMain
                 ElseIf button_active = 1 Then
                     btnEmployee.BackgroundImage = My.Resources.snav_btn_active
                 ElseIf button_active = 2 Then
-                    btnProducts.BackgroundImage = My.Resources.snav_btn_active
+                    btnSupplier.BackgroundImage = My.Resources.snav_btn_active
                 ElseIf button_active = 3 Then
-                    btnStocks.BackgroundImage = My.Resources.snav_btn_active
+                    btnBranch.BackgroundImage = My.Resources.snav_btn_active
                 ElseIf button_active = 4 Then
-                    btnDelivery.BackgroundImage = My.Resources.snav_btn_active
+                    btnRack.BackgroundImage = My.Resources.snav_btn_active
                 ElseIf button_active = 5 Then
+                    btnProducts.BackgroundImage = My.Resources.snav_btn_active
+                ElseIf button_active = 6 Then
+                    btnStocks.BackgroundImage = My.Resources.snav_btn_active
+                ElseIf button_active = 7 Then
+                    btnDelivery.BackgroundImage = My.Resources.snav_btn_active
+                ElseIf button_active = 8 Then
                     btnReport.BackgroundImage = My.Resources.snav_btn_active
                 End If
             End If
@@ -107,7 +122,70 @@ Public Class mdiMain
     Private Sub btnEmployee_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnEmployee.MouseLeave
         button_hover()
     End Sub
+    Private Sub btnSupplier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupplier.Click
+        btnNavMin.PerformClick()
+        closeLastFrm(frmSupplier)
+        pnlMain.Controls.Clear()
+        frmSupplier.TopLevel = False
+        frmSupplier.TopMost = True
+        pnlMain.Controls.Add(frmSupplier)
+        frmSupplier.Show()
+        button_active = 2
+        button_hover()
+        btnSupplier.BackgroundImage = My.Resources.snav_btn_active
+    End Sub
 
+    Private Sub btnSupplier_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSupplier.MouseHover
+        button_hover()
+        btnSupplier.BackgroundImage = My.Resources.snav_btn_active
+    End Sub
+
+    Private Sub btnSupplier_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSupplier.MouseLeave
+        button_hover()
+    End Sub
+    Private Sub btnBranch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBranch.Click
+        btnNavMin.PerformClick()
+        closeLastFrm(frmBranch)
+        pnlMain.Controls.Clear()
+        frmBranch.TopLevel = False
+        frmBranch.TopMost = True
+        pnlMain.Controls.Add(frmBranch)
+        frmBranch.Show()
+        button_active = 3
+        button_hover()
+        btnBranch.BackgroundImage = My.Resources.snav_btn_active
+    End Sub
+
+    Private Sub btnBranch_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnBranch.MouseHover
+        button_hover()
+        btnBranch.BackgroundImage = My.Resources.snav_btn_active
+    End Sub
+
+    Private Sub btnBranch_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnBranch.MouseLeave
+        button_hover()
+    End Sub
+
+    Private Sub btnRack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRack.Click
+        btnNavMin.PerformClick()
+        closeLastFrm(frmRack)
+        pnlMain.Controls.Clear()
+        frmRack.TopLevel = False
+        frmRack.TopMost = True
+        pnlMain.Controls.Add(frmRack)
+        frmRack.Show()
+        button_active = 4
+        button_hover()
+        btnRack.BackgroundImage = My.Resources.snav_btn_active
+    End Sub
+
+    Private Sub btnRack_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnRack.MouseHover
+        button_hover()
+        btnRack.BackgroundImage = My.Resources.snav_btn_active
+    End Sub
+
+    Private Sub btnRack_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnRack.MouseLeave
+        button_hover()
+    End Sub
     Private Sub btnProducts_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnProducts.Click
         btnNavMin.PerformClick()
         closeLastFrm(frmProducts)
@@ -116,7 +194,7 @@ Public Class mdiMain
         frmProducts.TopMost = True
         pnlMain.Controls.Add(frmProducts)
         frmProducts.Show()
-        button_active = 2
+        button_active = 5
         button_hover()
         btnProducts.BackgroundImage = My.Resources.snav_btn_active
     End Sub
@@ -132,13 +210,13 @@ Public Class mdiMain
 
     Private Sub btnStocks_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStocks.Click
         btnNavMin.PerformClick()
-        closeLastFrm(frmStockIn)
+        closeLastFrm(frmStocks)
         pnlMain.Controls.Clear()
-        frmStockIn.TopLevel = False
-        frmStockIn.TopMost = True
-        pnlMain.Controls.Add(frmStockIn)
-        frmStockIn.Show()
-        button_active = 3
+        frmStocks.TopLevel = False
+        frmStocks.TopMost = True
+        pnlMain.Controls.Add(frmStocks)
+        frmStocks.Show()
+        button_active = 6
         button_hover()
         btnStocks.BackgroundImage = My.Resources.snav_btn_active
     End Sub
@@ -160,7 +238,7 @@ Public Class mdiMain
         frmDelivery.TopMost = True
         pnlMain.Controls.Add(frmDelivery)
         frmDelivery.Show()
-        button_active = 4
+        button_active = 7
         button_hover()
         btnDelivery.BackgroundImage = My.Resources.snav_btn_active
     End Sub
@@ -182,7 +260,7 @@ Public Class mdiMain
         'Me.pnlMain.Controls.Clear()
         'Me.pnlMain.Controls.Add(frmReports)
         'frmReports.Show()
-        button_active = 5
+        button_active = 8
         button_hover()
         btnReport.BackgroundImage = My.Resources.snav_btn_active
     End Sub
@@ -210,5 +288,7 @@ Public Class mdiMain
         btnNavMin.Visible = False
     End Sub
 
+    Private Sub pnlMain_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles pnlMain.Paint
 
+    End Sub
 End Class
