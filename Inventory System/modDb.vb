@@ -1,7 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Module modDb
-    Public testvar As String
     Public strCon As String
     Public dbCon As MySql.Data.MySqlClient.MySqlConnection
     Public strServer As String = "localhost"

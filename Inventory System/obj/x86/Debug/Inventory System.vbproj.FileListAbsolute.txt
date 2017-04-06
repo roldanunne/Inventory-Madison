@@ -140,3 +140,6 @@ C:\VB.Net Project\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory Sys
 C:\VB.Net Project\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmAdjustment.resources
 C:\VB.Net Project\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmRack.resources
 C:\VB.Net Project\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProductRackLevel.resources
+C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.pdb
