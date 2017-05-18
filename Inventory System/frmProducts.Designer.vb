@@ -50,21 +50,20 @@ Partial Class frmProducts
         Me.prod_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prod_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prod_qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.prod_percentage = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prod_price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prod_class = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnAdjustment = New System.Windows.Forms.Button()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pnlProductData = New System.Windows.Forms.Panel()
+        Me.btnMoreDetails = New System.Windows.Forms.Button()
         Me.gbWarehouse = New System.Windows.Forms.GroupBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.lbLocation = New System.Windows.Forms.ListBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.gbAmounts = New System.Windows.Forms.GroupBox()
-        Me.txtPercentage = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtCriticalStock = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -72,10 +71,9 @@ Partial Class frmProducts
         Me.gbDetails = New System.Windows.Forms.GroupBox()
         Me.txtProductClass = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.btnMoreDetails = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.picBarcode = New System.Windows.Forms.PictureBox()
         Me.pnlProductGrid = New System.Windows.Forms.Panel()
+        Me.lblInventoryAdjustment = New System.Windows.Forms.Label()
         Me.ofdProductImage = New System.Windows.Forms.OpenFileDialog()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.fbdProductImages = New System.Windows.Forms.FolderBrowserDialog()
@@ -87,6 +85,7 @@ Partial Class frmProducts
         Me.Panel2.SuspendLayout()
         Me.pnlProductData.SuspendLayout()
         Me.gbWarehouse.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.gbAmounts.SuspendLayout()
         Me.gbDetails.SuspendLayout()
         CType(Me.picBarcode, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,17 +96,18 @@ Partial Class frmProducts
         '
         'txtProductDescription
         '
-        Me.txtProductDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProductDescription.Location = New System.Drawing.Point(13, 126)
+        Me.txtProductDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProductDescription.Location = New System.Drawing.Point(9, 105)
         Me.txtProductDescription.Multiline = True
         Me.txtProductDescription.Name = "txtProductDescription"
-        Me.txtProductDescription.Size = New System.Drawing.Size(309, 44)
+        Me.txtProductDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtProductDescription.Size = New System.Drawing.Size(414, 60)
         Me.txtProductDescription.TabIndex = 60
         '
         'txtProductQuantity
         '
         Me.txtProductQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProductQuantity.Location = New System.Drawing.Point(137, 35)
+        Me.txtProductQuantity.Location = New System.Drawing.Point(20, 46)
         Me.txtProductQuantity.Name = "txtProductQuantity"
         Me.txtProductQuantity.ReadOnly = True
         Me.txtProductQuantity.Size = New System.Drawing.Size(89, 29)
@@ -117,11 +117,10 @@ Partial Class frmProducts
         '
         'txtProductName
         '
-        Me.txtProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProductName.Location = New System.Drawing.Point(13, 47)
-        Me.txtProductName.Multiline = True
+        Me.txtProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProductName.Location = New System.Drawing.Point(12, 47)
         Me.txtProductName.Name = "txtProductName"
-        Me.txtProductName.Size = New System.Drawing.Size(309, 45)
+        Me.txtProductName.Size = New System.Drawing.Size(307, 29)
         Me.txtProductName.TabIndex = 58
         '
         'txtBarcode
@@ -129,10 +128,10 @@ Partial Class frmProducts
         Me.txtBarcode.BackColor = System.Drawing.Color.Black
         Me.txtBarcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBarcode.ForeColor = System.Drawing.Color.Lime
-        Me.txtBarcode.Location = New System.Drawing.Point(118, 9)
+        Me.txtBarcode.Location = New System.Drawing.Point(133, 11)
         Me.txtBarcode.Name = "txtBarcode"
         Me.txtBarcode.ReadOnly = True
-        Me.txtBarcode.Size = New System.Drawing.Size(227, 44)
+        Me.txtBarcode.Size = New System.Drawing.Size(252, 44)
         Me.txtBarcode.TabIndex = 57
         Me.txtBarcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -141,7 +140,7 @@ Partial Class frmProducts
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(6, 103)
+        Me.Label6.Location = New System.Drawing.Point(9, 83)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(110, 20)
         Me.Label6.TabIndex = 56
@@ -152,7 +151,7 @@ Partial Class frmProducts
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(6, 41)
+        Me.Label5.Location = New System.Drawing.Point(16, 23)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(86, 20)
         Me.Label5.TabIndex = 55
@@ -174,7 +173,7 @@ Partial Class frmProducts
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(-1, 14)
+        Me.Label3.Location = New System.Drawing.Point(10, 14)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 37)
         Me.Label3.TabIndex = 53
@@ -188,9 +187,9 @@ Partial Class frmProducts
         Me.gbImage.Controls.Add(Me.picProductImage)
         Me.gbImage.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbImage.ForeColor = System.Drawing.Color.White
-        Me.gbImage.Location = New System.Drawing.Point(876, 3)
+        Me.gbImage.Location = New System.Drawing.Point(742, 3)
         Me.gbImage.Name = "gbImage"
-        Me.gbImage.Size = New System.Drawing.Size(375, 318)
+        Me.gbImage.Size = New System.Drawing.Size(375, 324)
         Me.gbImage.TabIndex = 52
         Me.gbImage.TabStop = False
         Me.gbImage.Text = "Product Image"
@@ -321,7 +320,7 @@ Partial Class frmProducts
         Me.btnDelete.ForeColor = System.Drawing.Color.White
         Me.btnDelete.Image = Global.Inventory_System.My.Resources.Resources.cart_cancel
         Me.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDelete.Location = New System.Drawing.Point(910, 9)
+        Me.btnDelete.Location = New System.Drawing.Point(881, 11)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(125, 47)
         Me.btnDelete.TabIndex = 48
@@ -338,7 +337,7 @@ Partial Class frmProducts
         Me.btnAddProduct.ForeColor = System.Drawing.Color.White
         Me.btnAddProduct.Image = Global.Inventory_System.My.Resources.Resources.cart_add
         Me.btnAddProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddProduct.Location = New System.Drawing.Point(769, 9)
+        Me.btnAddProduct.Location = New System.Drawing.Point(747, 11)
         Me.btnAddProduct.Name = "btnAddProduct"
         Me.btnAddProduct.Size = New System.Drawing.Size(125, 47)
         Me.btnAddProduct.TabIndex = 47
@@ -352,13 +351,13 @@ Partial Class frmProducts
         Me.dgvProducts.AllowUserToDeleteRows = False
         Me.dgvProducts.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
         Me.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.barcode, Me.prod_name, Me.prod_desc, Me.prod_qty, Me.prod_percentage, Me.prod_price, Me.prod_class})
+        Me.dgvProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.barcode, Me.prod_name, Me.prod_desc, Me.prod_qty, Me.prod_price, Me.prod_class})
         Me.dgvProducts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvProducts.Location = New System.Drawing.Point(18, 45)
         Me.dgvProducts.Name = "dgvProducts"
         Me.dgvProducts.ReadOnly = True
         Me.dgvProducts.RowTemplate.Height = 20
-        Me.dgvProducts.Size = New System.Drawing.Size(1228, 259)
+        Me.dgvProducts.Size = New System.Drawing.Size(1098, 239)
         Me.dgvProducts.TabIndex = 46
         '
         'id
@@ -383,7 +382,7 @@ Partial Class frmProducts
         Me.prod_name.HeaderText = "Product Name"
         Me.prod_name.Name = "prod_name"
         Me.prod_name.ReadOnly = True
-        Me.prod_name.Width = 200
+        Me.prod_name.Width = 300
         '
         'prod_desc
         '
@@ -391,7 +390,7 @@ Partial Class frmProducts
         Me.prod_desc.HeaderText = "Description"
         Me.prod_desc.Name = "prod_desc"
         Me.prod_desc.ReadOnly = True
-        Me.prod_desc.Width = 300
+        Me.prod_desc.Width = 400
         '
         'prod_qty
         '
@@ -399,14 +398,6 @@ Partial Class frmProducts
         Me.prod_qty.HeaderText = "Quantity"
         Me.prod_qty.Name = "prod_qty"
         Me.prod_qty.ReadOnly = True
-        '
-        'prod_percentage
-        '
-        Me.prod_percentage.DataPropertyName = "prod_percentage"
-        Me.prod_percentage.HeaderText = "Percentage"
-        Me.prod_percentage.Name = "prod_percentage"
-        Me.prod_percentage.ReadOnly = True
-        Me.prod_percentage.Width = 200
         '
         'prod_price
         '
@@ -426,7 +417,6 @@ Partial Class frmProducts
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.DimGray
-        Me.Panel2.Controls.Add(Me.btnAdjustment)
         Me.Panel2.Controls.Add(Me.txtId)
         Me.Panel2.Controls.Add(Me.btnClose)
         Me.Panel2.Controls.Add(Me.Panel1)
@@ -436,25 +426,8 @@ Partial Class frmProducts
         Me.Panel2.ForeColor = System.Drawing.Color.LightGray
         Me.Panel2.Location = New System.Drawing.Point(17, 12)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1268, 64)
+        Me.Panel2.Size = New System.Drawing.Size(1140, 64)
         Me.Panel2.TabIndex = 61
-        '
-        'btnAdjustment
-        '
-        Me.btnAdjustment.BackColor = System.Drawing.Color.Navy
-        Me.btnAdjustment.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAdjustment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdjustment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdjustment.ForeColor = System.Drawing.Color.White
-        Me.btnAdjustment.Image = Global.Inventory_System.My.Resources.Resources.settings
-        Me.btnAdjustment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAdjustment.Location = New System.Drawing.Point(1056, 9)
-        Me.btnAdjustment.Name = "btnAdjustment"
-        Me.btnAdjustment.Size = New System.Drawing.Size(125, 47)
-        Me.btnAdjustment.TabIndex = 68
-        Me.btnAdjustment.Text = "View     " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Adjustment"
-        Me.btnAdjustment.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAdjustment.UseVisualStyleBackColor = False
         '
         'txtId
         '
@@ -473,7 +446,7 @@ Partial Class frmProducts
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.White
         Me.btnClose.Image = Global.Inventory_System.My.Resources.Resources.close_icon
-        Me.btnClose.Location = New System.Drawing.Point(1199, 11)
+        Me.btnClose.Location = New System.Drawing.Point(1065, 11)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(47, 47)
         Me.btnClose.TabIndex = 66
@@ -502,26 +475,65 @@ Partial Class frmProducts
         'pnlProductData
         '
         Me.pnlProductData.BackColor = System.Drawing.Color.DimGray
+        Me.pnlProductData.Controls.Add(Me.btnMoreDetails)
         Me.pnlProductData.Controls.Add(Me.gbWarehouse)
         Me.pnlProductData.Controls.Add(Me.gbImage)
         Me.pnlProductData.Controls.Add(Me.gbAmounts)
         Me.pnlProductData.Controls.Add(Me.gbDetails)
-        Me.pnlProductData.Location = New System.Drawing.Point(17, 82)
+        Me.pnlProductData.Location = New System.Drawing.Point(16, 82)
         Me.pnlProductData.Name = "pnlProductData"
-        Me.pnlProductData.Size = New System.Drawing.Size(1268, 328)
+        Me.pnlProductData.Size = New System.Drawing.Size(1141, 331)
         Me.pnlProductData.TabIndex = 62
+        '
+        'btnMoreDetails
+        '
+        Me.btnMoreDetails.BackColor = System.Drawing.Color.White
+        Me.btnMoreDetails.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMoreDetails.FlatAppearance.BorderSize = 0
+        Me.btnMoreDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMoreDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMoreDetails.ForeColor = System.Drawing.Color.Blue
+        Me.btnMoreDetails.Location = New System.Drawing.Point(609, 293)
+        Me.btnMoreDetails.Name = "btnMoreDetails"
+        Me.btnMoreDetails.Size = New System.Drawing.Size(95, 32)
+        Me.btnMoreDetails.TabIndex = 61
+        Me.btnMoreDetails.Text = "More Details"
+        Me.btnMoreDetails.UseVisualStyleBackColor = False
         '
         'gbWarehouse
         '
+        Me.gbWarehouse.Controls.Add(Me.Panel4)
         Me.gbWarehouse.Controls.Add(Me.Label10)
         Me.gbWarehouse.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbWarehouse.ForeColor = System.Drawing.Color.White
-        Me.gbWarehouse.Location = New System.Drawing.Point(602, 70)
+        Me.gbWarehouse.Location = New System.Drawing.Point(466, 62)
         Me.gbWarehouse.Name = "gbWarehouse"
-        Me.gbWarehouse.Size = New System.Drawing.Size(268, 207)
+        Me.gbWarehouse.Size = New System.Drawing.Size(270, 222)
         Me.gbWarehouse.TabIndex = 66
         Me.gbWarehouse.TabStop = False
         Me.gbWarehouse.Text = "Location"
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel4.Controls.Add(Me.lbLocation)
+        Me.Panel4.Location = New System.Drawing.Point(5, 24)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(259, 189)
+        Me.Panel4.TabIndex = 68
+        '
+        'lbLocation
+        '
+        Me.lbLocation.BackColor = System.Drawing.Color.Gainsboro
+        Me.lbLocation.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lbLocation.ForeColor = System.Drawing.Color.Black
+        Me.lbLocation.FormattingEnabled = True
+        Me.lbLocation.ItemHeight = 20
+        Me.lbLocation.Location = New System.Drawing.Point(10, 4)
+        Me.lbLocation.Margin = New System.Windows.Forms.Padding(20)
+        Me.lbLocation.Name = "lbLocation"
+        Me.lbLocation.Size = New System.Drawing.Size(238, 180)
+        Me.lbLocation.TabIndex = 67
         '
         'Label10
         '
@@ -535,8 +547,6 @@ Partial Class frmProducts
         '
         'gbAmounts
         '
-        Me.gbAmounts.Controls.Add(Me.txtPercentage)
-        Me.gbAmounts.Controls.Add(Me.Label13)
         Me.gbAmounts.Controls.Add(Me.Label9)
         Me.gbAmounts.Controls.Add(Me.txtCriticalStock)
         Me.gbAmounts.Controls.Add(Me.Label8)
@@ -545,40 +555,19 @@ Partial Class frmProducts
         Me.gbAmounts.Controls.Add(Me.txtProductPrice)
         Me.gbAmounts.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbAmounts.ForeColor = System.Drawing.Color.White
-        Me.gbAmounts.Location = New System.Drawing.Point(350, 70)
+        Me.gbAmounts.Location = New System.Drawing.Point(19, 235)
         Me.gbAmounts.Name = "gbAmounts"
-        Me.gbAmounts.Size = New System.Drawing.Size(242, 227)
+        Me.gbAmounts.Size = New System.Drawing.Size(440, 86)
         Me.gbAmounts.TabIndex = 64
         Me.gbAmounts.TabStop = False
         Me.gbAmounts.Text = "Amounts"
-        '
-        'txtPercentage
-        '
-        Me.txtPercentage.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPercentage.Location = New System.Drawing.Point(137, 124)
-        Me.txtPercentage.Name = "txtPercentage"
-        Me.txtPercentage.Size = New System.Drawing.Size(89, 29)
-        Me.txtPercentage.TabIndex = 68
-        Me.txtPercentage.Text = "0"
-        Me.txtPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(6, 130)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(111, 20)
-        Me.Label13.TabIndex = 67
-        Me.Label13.Text = "Percentage :"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(6, 85)
+        Me.Label9.Location = New System.Drawing.Point(144, 22)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(125, 20)
         Me.Label9.TabIndex = 65
@@ -587,9 +576,9 @@ Partial Class frmProducts
         'txtCriticalStock
         '
         Me.txtCriticalStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCriticalStock.Location = New System.Drawing.Point(137, 79)
+        Me.txtCriticalStock.Location = New System.Drawing.Point(148, 45)
         Me.txtCriticalStock.Name = "txtCriticalStock"
-        Me.txtCriticalStock.Size = New System.Drawing.Size(89, 29)
+        Me.txtCriticalStock.Size = New System.Drawing.Size(121, 29)
         Me.txtCriticalStock.TabIndex = 66
         Me.txtCriticalStock.Text = "0"
         Me.txtCriticalStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -599,7 +588,7 @@ Partial Class frmProducts
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(6, 175)
+        Me.Label8.Location = New System.Drawing.Point(307, 23)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(59, 20)
         Me.Label8.TabIndex = 63
@@ -608,9 +597,9 @@ Partial Class frmProducts
         'txtProductPrice
         '
         Me.txtProductPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProductPrice.Location = New System.Drawing.Point(137, 169)
+        Me.txtProductPrice.Location = New System.Drawing.Point(311, 45)
         Me.txtProductPrice.Name = "txtProductPrice"
-        Me.txtProductPrice.Size = New System.Drawing.Size(89, 29)
+        Me.txtProductPrice.Size = New System.Drawing.Size(104, 29)
         Me.txtProductPrice.TabIndex = 64
         Me.txtProductPrice.Text = "0"
         Me.txtProductPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -625,19 +614,19 @@ Partial Class frmProducts
         Me.gbDetails.Controls.Add(Me.txtProductDescription)
         Me.gbDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbDetails.ForeColor = System.Drawing.Color.White
-        Me.gbDetails.Location = New System.Drawing.Point(12, 70)
+        Me.gbDetails.Location = New System.Drawing.Point(19, 63)
         Me.gbDetails.Name = "gbDetails"
-        Me.gbDetails.Size = New System.Drawing.Size(333, 227)
+        Me.gbDetails.Size = New System.Drawing.Size(441, 171)
         Me.gbDetails.TabIndex = 63
         Me.gbDetails.TabStop = False
         Me.gbDetails.Text = "Details"
         '
         'txtProductClass
         '
-        Me.txtProductClass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProductClass.Location = New System.Drawing.Point(78, 181)
+        Me.txtProductClass.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProductClass.Location = New System.Drawing.Point(337, 45)
         Me.txtProductClass.Name = "txtProductClass"
-        Me.txtProductClass.Size = New System.Drawing.Size(244, 26)
+        Me.txtProductClass.Size = New System.Drawing.Size(86, 29)
         Me.txtProductClass.TabIndex = 67
         '
         'Label12
@@ -645,41 +634,11 @@ Partial Class frmProducts
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(9, 183)
+        Me.Label12.Location = New System.Drawing.Point(333, 18)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(63, 20)
         Me.Label12.TabIndex = 66
         Me.Label12.Text = "Class :"
-        '
-        'btnMoreDetails
-        '
-        Me.btnMoreDetails.BackColor = System.Drawing.Color.White
-        Me.btnMoreDetails.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMoreDetails.FlatAppearance.BorderSize = 0
-        Me.btnMoreDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMoreDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMoreDetails.ForeColor = System.Drawing.Color.Blue
-        Me.btnMoreDetails.Location = New System.Drawing.Point(786, 371)
-        Me.btnMoreDetails.Name = "btnMoreDetails"
-        Me.btnMoreDetails.Size = New System.Drawing.Size(95, 32)
-        Me.btnMoreDetails.TabIndex = 61
-        Me.btnMoreDetails.Text = "More Details"
-        Me.btnMoreDetails.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = Global.Inventory_System.My.Resources.Resources._1487715790_BT_printer
-        Me.Button2.Location = New System.Drawing.Point(600, 9)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(50, 44)
-        Me.Button2.TabIndex = 49
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'picBarcode
         '
@@ -688,9 +647,9 @@ Partial Class frmProducts
         Me.picBarcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.picBarcode.Image = Global.Inventory_System.My.Resources.Resources.noImage
         Me.picBarcode.InitialImage = Global.Inventory_System.My.Resources.Resources.noImage
-        Me.picBarcode.Location = New System.Drawing.Point(360, 9)
+        Me.picBarcode.Location = New System.Drawing.Point(405, 3)
         Me.picBarcode.Name = "picBarcode"
-        Me.picBarcode.Size = New System.Drawing.Size(227, 44)
+        Me.picBarcode.Size = New System.Drawing.Size(216, 55)
         Me.picBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picBarcode.TabIndex = 1
         Me.picBarcode.TabStop = False
@@ -698,30 +657,42 @@ Partial Class frmProducts
         'pnlProductGrid
         '
         Me.pnlProductGrid.BackColor = System.Drawing.Color.DimGray
+        Me.pnlProductGrid.Controls.Add(Me.lblInventoryAdjustment)
         Me.pnlProductGrid.Controls.Add(Me.Label1)
         Me.pnlProductGrid.Controls.Add(Me.dgvProducts)
         Me.pnlProductGrid.Controls.Add(Me.txtSearchProduct)
-        Me.pnlProductGrid.Location = New System.Drawing.Point(17, 416)
+        Me.pnlProductGrid.Location = New System.Drawing.Point(17, 419)
         Me.pnlProductGrid.Name = "pnlProductGrid"
-        Me.pnlProductGrid.Size = New System.Drawing.Size(1268, 331)
+        Me.pnlProductGrid.Size = New System.Drawing.Size(1140, 296)
         Me.pnlProductGrid.TabIndex = 63
+        '
+        'lblInventoryAdjustment
+        '
+        Me.lblInventoryAdjustment.AutoSize = True
+        Me.lblInventoryAdjustment.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblInventoryAdjustment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblInventoryAdjustment.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInventoryAdjustment.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblInventoryAdjustment.Location = New System.Drawing.Point(859, 10)
+        Me.lblInventoryAdjustment.Name = "lblInventoryAdjustment"
+        Me.lblInventoryAdjustment.Size = New System.Drawing.Size(257, 24)
+        Me.lblInventoryAdjustment.TabIndex = 52
+        Me.lblInventoryAdjustment.Text = "View Inventory Adjustment"
         '
         'ofdProductImage
         '
-        Me.ofdProductImage.FileName = "ofdProductImage"
         Me.ofdProductImage.Multiselect = True
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.DimGray
-        Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.picBarcode)
         Me.Panel3.Controls.Add(Me.txtBarcode)
+        Me.Panel3.Controls.Add(Me.picBarcode)
         Me.Panel3.ForeColor = System.Drawing.Color.Black
-        Me.Panel3.Location = New System.Drawing.Point(35, 89)
+        Me.Panel3.Location = New System.Drawing.Point(20, 84)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(656, 62)
+        Me.Panel3.Size = New System.Drawing.Size(705, 62)
         Me.Panel3.TabIndex = 64
         '
         'ilProductAlbum
@@ -737,7 +708,7 @@ Partial Class frmProducts
         Me.pnlImageNav.Controls.Add(Me.lblStat)
         Me.pnlImageNav.Controls.Add(Me.btnNext)
         Me.pnlImageNav.Controls.Add(Me.btnLast)
-        Me.pnlImageNav.Location = New System.Drawing.Point(898, 354)
+        Me.pnlImageNav.Location = New System.Drawing.Point(765, 354)
         Me.pnlImageNav.Name = "pnlImageNav"
         Me.pnlImageNav.Size = New System.Drawing.Size(321, 49)
         Me.pnlImageNav.TabIndex = 65
@@ -747,8 +718,7 @@ Partial Class frmProducts
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1312, 772)
-        Me.Controls.Add(Me.btnMoreDetails)
+        Me.ClientSize = New System.Drawing.Size(1282, 727)
         Me.Controls.Add(Me.pnlImageNav)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.pnlProductGrid)
@@ -766,6 +736,7 @@ Partial Class frmProducts
         Me.pnlProductData.ResumeLayout(False)
         Me.gbWarehouse.ResumeLayout(False)
         Me.gbWarehouse.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
         Me.gbAmounts.ResumeLayout(False)
         Me.gbAmounts.PerformLayout()
         Me.gbDetails.ResumeLayout(False)
@@ -807,7 +778,6 @@ Partial Class frmProducts
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtProductClass As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents picBarcode As System.Windows.Forms.PictureBox
     Friend WithEvents ofdProductImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -823,8 +793,6 @@ Partial Class frmProducts
     Friend WithEvents btnFirst As System.Windows.Forms.Button
     Friend WithEvents lblStat As System.Windows.Forms.Label
     Friend WithEvents btnBrowse As System.Windows.Forms.Button
-    Friend WithEvents txtPercentage As System.Windows.Forms.TextBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents btnRemove As System.Windows.Forms.Button
     Friend WithEvents fbdProductImages As System.Windows.Forms.FolderBrowserDialog
     Friend WithEvents ilProductAlbum As System.Windows.Forms.ImageList
@@ -834,8 +802,9 @@ Partial Class frmProducts
     Friend WithEvents prod_name As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents prod_desc As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents prod_qty As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents prod_percentage As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents prod_price As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents prod_class As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents btnAdjustment As System.Windows.Forms.Button
+    Friend WithEvents lbLocation As System.Windows.Forms.ListBox
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents lblInventoryAdjustment As System.Windows.Forms.Label
 End Class

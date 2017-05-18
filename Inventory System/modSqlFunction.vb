@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Microsoft.Reporting.WinForms
 
 Module modSqlFunction
     Public Function searchData(ByVal tblName As String, ByVal fieldName As String, ByVal fieldName1 As String) As Boolean
@@ -36,7 +37,7 @@ Module modSqlFunction
                                    ByVal fieldToRetrieve As String, ByRef objectName As PictureBox)
         Try
             OpenCon()
-            Dim strQry As String = "SELECT * FROM " & tblName & " WHERE " & fieldname & " = '" & valueOfField & "'"
+            Dim strQry As String = "SELECT * FROM " & tblName & " WHERE " & fieldName & " = '" & valueOfField & "'"
             Dim myCommand As New MySqlCommand(strQry, dbCon)
             Dim myReader As MySqlDataReader
 
@@ -72,7 +73,7 @@ Module modSqlFunction
         End Try
         CloseCon()
     End Sub
-   
+
     Public Sub cmbViewData(ByVal tblName As String, ByVal strIndex As Integer, ByVal cmb_data As ComboBox)
         Dim ctr As Integer
         Dim i As Integer
@@ -111,8 +112,6 @@ Module modSqlFunction
         End Try
     End Sub
 
-
-    'newly added
     Public Sub loadDataGrid(ByVal strQuery As String, ByVal dgView As DataGridView)
         Try
             OpenCon()
@@ -124,5 +123,101 @@ Module modSqlFunction
             MessageBox.Show(ex.Message & "Database Update Error")
         End Try
     End Sub
+    'newly added
+    Public Sub loadLocation(ByVal txtId As String, ByVal lbLocation As ListBox)
 
+        Try
+            OpenCon()
+            Dim strQry As String = "SELECT id,rack_name FROM rack WHERE prod_id = '" & txtId & "'"
+            Dim myCommand As New MySqlCommand(strQry, dbCon)
+            Dim myReader As MySqlDataReader
+
+
+            myCommand.ExecuteNonQuery()
+            myReader = myCommand.ExecuteReader
+
+            If myReader.HasRows Then
+                While myReader.Read()
+                    Dim rackId As String = myReader("id")
+                    lbLocation.Items.Add(myReader("rack_name"))
+                    loadLevel(rackId, lbLocation)
+                End While
+            End If
+            myReader.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message & "Database Retrieving Error")
+        End Try
+        CloseCon()
+    End Sub
+    Public Sub loadLevel(ByVal rackId As String, ByVal lbLocation As ListBox)
+
+        Try
+            OpenCon()
+            Dim strQry As String = "SELECT level_name FROM rack_level WHERE rack_id = '" & rackId & "'"
+            Dim myCommand As New MySqlCommand(strQry, dbCon)
+            Dim myReader As MySqlDataReader
+
+            myCommand.ExecuteNonQuery()
+            myReader = myCommand.ExecuteReader
+
+            If myReader.HasRows Then
+                While myReader.Read()
+                    lbLocation.Items.Add("     " & myReader("level_name"))
+                End While
+                lbLocation.Items.Add("- - - - - - - - - - - - - - - -")
+            End If
+            myReader.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message & "Database Retrieving Error")
+        End Try
+        CloseCon()
+    End Sub
+    Public Sub loadReport(ByVal columnName As String, ByVal tableName As String, ByVal rptReport As String, ByVal datasetName As String, ByVal rvReport As ReportViewer)
+        Try
+            OpenCon()
+            Dim myDataAdapter As New MySqlDataAdapter
+            Dim myDataset As New madisonData
+            Dim strQry As String = "SELECT " & columnName & " FROM " & tableName & ""
+            myDataAdapter.SelectCommand = New MySqlCommand(strQry, dbCon)
+            myDataAdapter.Fill(myDataset.Tables(0))
+
+            rvReport.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
+            rvReport.LocalReport.ReportPath = System.Environment.CurrentDirectory & "\" & rptReport & ""
+            rvReport.LocalReport.DataSources.Clear()
+            rvReport.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource(datasetName, myDataset.Tables(0)))
+            rvReport.DocumentMapCollapsed = True
+            rvReport.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
+            rvReport.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent
+            rvReport.ZoomPercent = 25
+            rvReport.RefreshReport()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        CloseCon()
+    End Sub
+    Public Sub loadReportRange(ByVal columnName As String, ByVal tableName As String, ByVal columnDate As String, ByVal dateFrom As String, ByVal dateTo As String, ByVal rptReport As String, ByVal datasetName As String, ByVal rvReport As ReportViewer)
+        Try
+            OpenCon()
+            Dim myDataAdapter As New MySqlDataAdapter
+            Dim myDataset As New madisonData
+            Dim strQry As String = "SELECT " & columnName & " FROM " & tableName & " WHERE " & columnDate & " >= '" & dateFrom & "' And " & columnDate & " < '" & dateTo & "'"
+            'WHERE " & columnDate & " >= CONVERT(datetime,'" & dateFrom & "')  AND   " & columnDate & " < CONVERT(datetime,'" & dateTo & "') ORDER BY " & columnOrder & " " & arrAscDesc & ""
+            myDataAdapter.SelectCommand = New MySqlCommand(strQry, dbCon)
+            myDataAdapter.Fill(myDataset.Tables(0))
+
+            rvReport.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local
+            rvReport.LocalReport.ReportPath = System.Environment.CurrentDirectory & "\" & rptReport & ""
+            rvReport.LocalReport.DataSources.Clear()
+            rvReport.LocalReport.DataSources.Add(New Microsoft.Reporting.WinForms.ReportDataSource(datasetName, myDataset.Tables(0)))
+            rvReport.DocumentMapCollapsed = True
+            rvReport.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
+            rvReport.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.Percent
+            rvReport.ZoomPercent = 25
+            'rvReport.LocalReport.ReleaseSandboxAppDomain()
+            rvReport.RefreshReport()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        CloseCon()
+    End Sub
 End Module

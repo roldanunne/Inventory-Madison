@@ -165,3 +165,4 @@ C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.Resources.r
 C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.popLogFiles.resources
 C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProductRackLevel.resources
 C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.vbproj.GenerateResource.Cache
+C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmInventoryAdjustment.resources

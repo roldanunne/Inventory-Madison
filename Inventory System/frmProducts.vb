@@ -24,7 +24,8 @@ Public Class frmProducts
         End If
     End Sub
     Private Sub loadData()
-        modSqlFunction.loadData("product ", " product.id, product.barcode, product.prod_name, product.prod_desc, product.prod_qty, product.prod_price, product.prod_class, prod_percentage", dgvProducts)
+        Dim columnName As String = " product.id, product.barcode, product.prod_name, product.prod_desc, product.prod_qty, product.prod_price, product.prod_class"
+        modSqlFunction.loadData("product ", columnName, dgvProducts)
     End Sub
 
     Private Sub generateBarcode()
@@ -106,7 +107,6 @@ Public Class frmProducts
         End If
 
     End Sub
-
     Private Function isImage(ByVal f As FileInfo) As Boolean
         Dim ext As String = f.Extension.ToLower
         If ext = ".gif" Or ext = ".jpg" Or ext = ".jpeg" Or ext = ".png" Or ext = ".bmp" Then
@@ -115,15 +115,14 @@ Public Class frmProducts
             Return False
         End If
     End Function
-
     Private Sub setFrmDefault()
         modFormFuction.setClearAll(Me)
         txtId.Text = ""
         lblStat.Text = "No Image"
         txtBarcode.Text = ""
         txtCriticalStock.Text = "10"
-        txtPercentage.Text = "0.00"
         txtProductPrice.Text = "0.00"
+        lbLocation.Items.Clear()
         txtSearchProduct.Select()
         pnlImageNav.Enabled = False
         pnlProductData.Enabled = False
@@ -144,7 +143,6 @@ Public Class frmProducts
             txtCriticalStock.Text = "10"
             txtProductQuantity.Text = "0"
             txtProductPrice.Text = "0.00"
-            txtPercentage.Text = "0.00"
             btnDelete.Image = My.Resources.cart_minus
             btnDelete.BackColor = Color.IndianRed
             btnDelete.Text = "&Cancel"
@@ -156,7 +154,7 @@ Public Class frmProducts
             btnAddProduct.Text = "&Save"
             btnAddProduct.Image = My.Resources.Resources.cart_check
         ElseIf btnAddProduct.Text = "&Save" Then
-            If txtProductName.Text = "" Or txtProductDescription.Text = "" Or txtPercentage.Text = "" Or txtCriticalStock.Text = "" Or ofdProductImage.FileName() = Nothing Then
+            If txtProductName.Text = "" Or txtProductDescription.Text = "" Or txtCriticalStock.Text = "" Then
                 MessageBox.Show("Please fill all records.", "ERROR MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error)
             ElseIf modSqlFunction.searchData("product", "prod_name = '" & txtProductName.Text & "' and prod_class", txtProductClass.Text) = True Then
                 MessageBox.Show("This Product is already exist...")
@@ -166,7 +164,7 @@ Public Class frmProducts
                     If picProductImage.ImageLocation = Nothing Then picProductImage.Image = My.Resources.noImage
 
                     Dim strQryTable As String = "INSERT INTO product Values('', '" & txtBarcode.Text & "', '" & txtProductName.Text &
-                        "', '" & txtProductDescription.Text & "', '" & txtProductClass.Text & "', '" & txtPercentage.Text & "','" & txtProductPrice.Text &
+                        "', '" & txtProductDescription.Text & "', '" & txtProductClass.Text & "','" & txtProductPrice.Text &
                         "', '" & txtProductQuantity.Text & "','" & txtCriticalStock.Text & "','" & modLoginCtlr.user_id & "' ,'" & currentDate & "','')"
                     Dim myCommand As New MySqlCommand(strQryTable, dbCon)
                     myCommand.ExecuteNonQuery()
@@ -176,6 +174,7 @@ Public Class frmProducts
 
                     'create directory and copy files
                     createDirectory()
+
                     Dim count = 1
                     For Each filename In ofdProductImage.FileNames
 
@@ -185,7 +184,9 @@ Public Class frmProducts
                         My.Computer.FileSystem.CopyFile(filename, productsPath & "\" & LastId & "\" & imgName & ".jpeg")
                         LoadImages(productsPath & "\" & LastId)
                         count += 1
+
                     Next
+                    ofdProductImage.Reset()
                     loadData()
                     MessageBox.Show("Data Inserted", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Catch ex As MySqlException
@@ -199,7 +200,7 @@ Public Class frmProducts
             Try
                 OpenCon()
                 Dim strQryTable As String = "UPDATE product SET barcode = '" & txtBarcode.Text & "', prod_name = '" & txtProductName.Text & "', prod_desc = '" &
-                    txtProductDescription.Text & "', prod_class = '" & txtProductClass.Text & "',  prod_percentage = '" & txtPercentage.Text & "',prod_price = '" & txtProductPrice.Text & "', prod_qty = '" &
+                    txtProductDescription.Text & "', prod_class = '" & txtProductClass.Text & "',prod_price = '" & txtProductPrice.Text & "', prod_qty = '" &
                     txtProductQuantity.Text & "',  employee_id = '" & modLoginCtlr.user_id & "', date_updated = '" & currentDate & "' WHERE id = '" & txtId.Text & "'"
                 Dim myCommand As New MySqlCommand(strQryTable, dbCon)
                 myCommand.ExecuteNonQuery()
@@ -240,9 +241,9 @@ Public Class frmProducts
             txtProductPrice.Text = row.Cells("prod_price").Value.ToString
             LoadImages(productsPath & "\" & txtId.Text)
 
-            'If ilProductAlbum.Images.Count < 0 Then
-            '    picProductImage.Image = My.Resources.noImage
-            'End If
+            If ilProductAlbum.Images.Count <= 0 Then
+                picProductImage.Image = My.Resources.noImage
+            End If
             'resize image
             'Dim filePath = productsPath & "\" & txtId.Text & ".jpg"
             'If My.Computer.FileSystem.FileExists(filePath) Then
@@ -291,27 +292,14 @@ Public Class frmProducts
     End Sub
 
     Private Sub txtSearchProduct_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearchProduct.TextChanged
-        modSqlFunction.loadData("product WHERE barcode LIKE '%" & txtSearchProduct.Text & "%' or prod_name LIKE '%" & txtSearchProduct.Text & "%'", " id, barcode, prod_name, prod_desc, prod_qty, prod_price, prod_class, warehouse_name, warehouse_room, room_level", dgvProducts)
+        Dim columnName As String = " product.id, product.barcode, product.prod_name, product.prod_desc, product.prod_qty, product.prod_price, product.prod_class"
+        modSqlFunction.loadData("product WHERE barcode LIKE '%" & txtSearchProduct.Text & "%' or prod_name LIKE '%" & txtSearchProduct.Text & "%'", columnName, dgvProducts)
     End Sub
 
     Private Sub txtProductPrice_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtProductPrice.KeyPress
         Dim FullStop As Char
         FullStop = "."
         If e.KeyChar = FullStop And txtProductPrice.Text.IndexOf(FullStop) <> -1 Then
-            e.Handled = True
-            Return
-        End If
-        If Not Char.IsDigit(e.KeyChar) Then
-            If (e.KeyChar <> FullStop) And (e.KeyChar <> Convert.ToChar(Keys.Back)) Then
-                e.Handled = True
-                Return
-            End If
-        End If
-    End Sub
-    Private Sub txtPercentage_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPercentage.KeyPress
-        Dim FullStop As Char
-        FullStop = "."
-        If e.KeyChar = FullStop And txtPercentage.Text.IndexOf(FullStop) <> -1 Then
             e.Handled = True
             Return
         End If
@@ -385,7 +373,19 @@ Public Class frmProducts
 
     End Sub
 
-    Private Sub btnAdjustment_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdjustment.Click
-        frmAdjustment.Show()
+    Private Sub txtId_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtId.TextChanged
+        lbLocation.Items.Clear()
+        modSqlFunction.loadLocation(txtId.Text, lbLocation)
     End Sub
+
+    Private Sub lblInventoryAdjustment_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblInventoryAdjustment.Click
+        frmInventoryAdjustment.Show()
+    End Sub
+    Private Sub btnEmployee_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblInventoryAdjustment.MouseHover
+        lblInventoryAdjustment.ForeColor = Color.RoyalBlue
+    End Sub
+    Private Sub lblInventoryAdjustment_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblInventoryAdjustment.MouseLeave
+        lblInventoryAdjustment.ForeColor = Color.White
+    End Sub
+
 End Class
