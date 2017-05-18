@@ -265,7 +265,7 @@ Partial Class frmMain
         Me.StatusStrip1.Size = New System.Drawing.Size(1264, 22)
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
-       
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

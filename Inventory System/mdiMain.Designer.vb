@@ -49,10 +49,10 @@ Partial Class mdiMain
         Me.pnlMain.BackColor = System.Drawing.Color.Transparent
         Me.pnlMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlMain.Location = New System.Drawing.Point(73, 0)
+        Me.pnlMain.Location = New System.Drawing.Point(254, 0)
         Me.pnlMain.Margin = New System.Windows.Forms.Padding(0)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(1191, 729)
+        Me.pnlMain.Size = New System.Drawing.Size(1010, 729)
         Me.pnlMain.TabIndex = 1
         '
         'pnlSideMenu
@@ -67,7 +67,7 @@ Partial Class mdiMain
         Me.pnlSideMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlSideMenu.Location = New System.Drawing.Point(0, 0)
         Me.pnlSideMenu.Name = "pnlSideMenu"
-        Me.pnlSideMenu.Size = New System.Drawing.Size(73, 729)
+        Me.pnlSideMenu.Size = New System.Drawing.Size(254, 729)
         Me.pnlSideMenu.TabIndex = 0
         '
         'btnNavMax

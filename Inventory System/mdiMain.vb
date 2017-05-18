@@ -79,6 +79,7 @@ Public Class mdiMain
 
     Private Sub mdiMain_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         If MessageBox.Show("Do You Want to CLOSED the System?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
+            frmReports.rvReport.LocalReport.ReleaseSandboxAppDomain()
             End
         Else
             e.Cancel = True
@@ -210,12 +211,7 @@ Public Class mdiMain
 
     Private Sub btnStocks_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStocks.Click
         btnNavMin.PerformClick()
-        closeLastFrm(frmStocks)
-        pnlMain.Controls.Clear()
-        frmStocks.TopLevel = False
-        frmStocks.TopMost = True
-        pnlMain.Controls.Add(frmStocks)
-        frmStocks.Show()
+        
         button_active = 6
         button_hover()
         btnStocks.BackgroundImage = My.Resources.snav_btn_active
@@ -254,12 +250,12 @@ Public Class mdiMain
 
     Private Sub btnReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReport.Click
         btnNavMin.PerformClick()
-        'closeLastFrm(frmDelivery)
-        'frmReports.TopLevel = False
-        'frmReports.TopMost = True
-        'Me.pnlMain.Controls.Clear()
-        'Me.pnlMain.Controls.Add(frmReports)
-        'frmReports.Show()
+        closeLastFrm(frmReports)
+        frmReports.TopLevel = False
+        frmReports.TopMost = True
+        Me.pnlMain.Controls.Clear()
+        Me.pnlMain.Controls.Add(frmReports)
+        frmReports.Show()
         button_active = 8
         button_hover()
         btnReport.BackgroundImage = My.Resources.snav_btn_active

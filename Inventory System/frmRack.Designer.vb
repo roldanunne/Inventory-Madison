@@ -22,11 +22,11 @@ Partial Class frmRack
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbxDetails = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtRackDesc = New System.Windows.Forms.TextBox()
@@ -182,8 +182,8 @@ Partial Class frmRack
         'rack_name
         '
         Me.rack_name.DataPropertyName = "rack_name"
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        Me.rack_name.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        Me.rack_name.DefaultCellStyle = DataGridViewCellStyle6
         Me.rack_name.HeaderText = "Name"
         Me.rack_name.Name = "rack_name"
         Me.rack_name.ReadOnly = True
@@ -192,8 +192,8 @@ Partial Class frmRack
         'rack_desc
         '
         Me.rack_desc.DataPropertyName = "rack_desc"
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        Me.rack_desc.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        Me.rack_desc.DefaultCellStyle = DataGridViewCellStyle7
         Me.rack_desc.HeaderText = "Description"
         Me.rack_desc.Name = "rack_desc"
         Me.rack_desc.ReadOnly = True
@@ -447,8 +447,8 @@ Partial Class frmRack
         'level_desc
         '
         Me.level_desc.DataPropertyName = "level_desc"
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        Me.level_desc.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        Me.level_desc.DefaultCellStyle = DataGridViewCellStyle8
         Me.level_desc.HeaderText = "Descripton"
         Me.level_desc.Name = "level_desc"
         Me.level_desc.ReadOnly = True
@@ -457,8 +457,8 @@ Partial Class frmRack
         'capacity
         '
         Me.capacity.DataPropertyName = "capacity"
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        Me.capacity.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
+        Me.capacity.DefaultCellStyle = DataGridViewCellStyle9
         Me.capacity.HeaderText = "Capacity"
         Me.capacity.Name = "capacity"
         Me.capacity.ReadOnly = True
@@ -466,8 +466,8 @@ Partial Class frmRack
         'rack
         '
         Me.rack.DataPropertyName = "rack_name"
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        Me.rack.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
+        Me.rack.DefaultCellStyle = DataGridViewCellStyle10
         Me.rack.HeaderText = "Rack"
         Me.rack.Name = "rack"
         Me.rack.ReadOnly = True

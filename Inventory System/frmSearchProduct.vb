@@ -22,7 +22,7 @@
             Dim row As DataGridViewRow
             row = Me.dgvSearchProduct.Rows(e.RowIndex)
             frmStocks.txtBarcode.Text = row.Cells("barcode").Value.ToString
-            frmAdjustment.txtBarcode.Text = row.Cells("barcode").Value.ToString
+            frmInventoryAdjustment.txtBarcode.Text = row.Cells("barcode").Value.ToString
         End If
         Me.Close()
     End Sub

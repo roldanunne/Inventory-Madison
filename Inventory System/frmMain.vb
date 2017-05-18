@@ -78,10 +78,7 @@
 
         'show form in pnlViewForm
         pnlViewForm.Controls.Clear()
-        frmStocks.TopLevel = False
-        frmStocks.TopMost = True
-        Me.pnlViewForm.Controls.Add(frmStocks)
-        frmStocks.Show()
+       
     End Sub
 
     Private Sub btnStockOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStockOut.Click
@@ -103,4 +100,6 @@
     Private Sub pnlViewForm_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles pnlViewForm.Paint
 
     End Sub
+
+   
 End Class
