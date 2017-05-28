@@ -6,7 +6,13 @@ Public Class frmRack
     Private Sub frmRack_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         loadRack()
         loadLevel()
+        loadProducts()
         setFromDefault()
+    End Sub
+    Private Sub loadProducts()
+        cmbProduct.Items.Add("Select Product")
+        cmbViewData("product", 2, cmbProduct)
+        cmbProduct.SelectedIndex = 0
     End Sub
     Private Sub loadRack()
         Dim query As String = "rack.id,rack_name,rack_desc"
@@ -46,7 +52,7 @@ Public Class frmRack
         Else
             Try
                 OpenCon()
-                Dim strQryTable As String = "INSERT INTO rack Values('','" & txtRackName.Text & "','" & txtRackDesc.Text & "','" & modLoginCtlr.user_id & "' ,'" & currentDate & "','')"
+                Dim strQryTable As String = "INSERT INTO rack Values('','" & txtRackName.Text & "','" & txtRackDesc.Text & "','" & currentDate & "','','" & modLoginCtlr.user_id & "' ,'" & txtProdId.Text & "')"
                 Dim myCommand As New MySqlCommand(strQryTable, dbCon)
                 myCommand.ExecuteNonQuery()
 
@@ -101,7 +107,7 @@ Public Class frmRack
                     Else
                         Try
                             OpenCon()
-                            Dim strQryTable As String = "INSERT INTO rack Values('','" & txtRackName.Text & "','" & txtRackDesc.Text & "','" & modLoginCtlr.user_id & "' ,'" & currentDate & "','')"
+                            Dim strQryTable As String = "INSERT INTO rack Values('','" & txtRackName.Text & "','" & txtRackDesc.Text & "','" & currentDate & "','','" & modLoginCtlr.user_id & "' ,'" & txtProdId.Text & "')"
                             Dim myCommand As New MySqlCommand(strQryTable, dbCon)
                             myCommand.ExecuteNonQuery()
 
@@ -291,5 +297,9 @@ Public Class frmRack
         txtRackName.Text = vbNullString
         txtRackDesc.Text = vbNullString
     End Sub
-
+    Private Sub cmbProduct_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbProduct.SelectedIndexChanged
+        If Not cmbProduct.Text = "Select Product" Then
+            retrieveSingleData("product", "prod_name", cmbProduct.Text, "id", txtProdId.Text)
+        End If
+    End Sub
 End Class

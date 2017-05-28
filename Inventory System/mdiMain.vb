@@ -211,7 +211,12 @@ Public Class mdiMain
 
     Private Sub btnStocks_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStocks.Click
         btnNavMin.PerformClick()
-        
+        closeLastFrm(frmStocks)
+        pnlMain.Controls.Clear()
+        frmStocks.TopLevel = False
+        frmStocks.TopMost = True
+        pnlMain.Controls.Add(frmStocks)
+        frmStocks.Show()
         button_active = 6
         button_hover()
         btnStocks.BackgroundImage = My.Resources.snav_btn_active

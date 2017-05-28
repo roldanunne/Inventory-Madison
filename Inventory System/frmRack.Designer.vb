@@ -22,11 +22,11 @@ Partial Class frmRack
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbxDetails = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtRackDesc = New System.Windows.Forms.TextBox()
@@ -66,6 +66,9 @@ Partial Class frmRack
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbProduct = New System.Windows.Forms.ComboBox()
+        Me.txtProdId = New System.Windows.Forms.TextBox()
         Me.gbxDetails.SuspendLayout()
         CType(Me.dgvRack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlRackData.SuspendLayout()
@@ -81,6 +84,8 @@ Partial Class frmRack
         '
         'gbxDetails
         '
+        Me.gbxDetails.Controls.Add(Me.cmbProduct)
+        Me.gbxDetails.Controls.Add(Me.Label2)
         Me.gbxDetails.Controls.Add(Me.Label6)
         Me.gbxDetails.Controls.Add(Me.txtRackDesc)
         Me.gbxDetails.Controls.Add(Me.Label1)
@@ -100,7 +105,7 @@ Partial Class frmRack
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(18, 84)
+        Me.Label6.Location = New System.Drawing.Point(12, 63)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(110, 20)
         Me.Label6.TabIndex = 41
@@ -109,10 +114,10 @@ Partial Class frmRack
         'txtRackDesc
         '
         Me.txtRackDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRackDesc.Location = New System.Drawing.Point(150, 84)
+        Me.txtRackDesc.Location = New System.Drawing.Point(144, 63)
         Me.txtRackDesc.Multiline = True
         Me.txtRackDesc.Name = "txtRackDesc"
-        Me.txtRackDesc.Size = New System.Drawing.Size(235, 71)
+        Me.txtRackDesc.Size = New System.Drawing.Size(235, 65)
         Me.txtRackDesc.TabIndex = 40
         '
         'Label1
@@ -121,7 +126,7 @@ Partial Class frmRack
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(18, 43)
+        Me.Label1.Location = New System.Drawing.Point(12, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 20)
         Me.Label1.TabIndex = 38
@@ -130,7 +135,7 @@ Partial Class frmRack
         'txtRackName
         '
         Me.txtRackName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRackName.Location = New System.Drawing.Point(150, 37)
+        Me.txtRackName.Location = New System.Drawing.Point(144, 22)
         Me.txtRackName.Name = "txtRackName"
         Me.txtRackName.Size = New System.Drawing.Size(235, 29)
         Me.txtRackName.TabIndex = 2
@@ -182,8 +187,8 @@ Partial Class frmRack
         'rack_name
         '
         Me.rack_name.DataPropertyName = "rack_name"
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        Me.rack_name.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        Me.rack_name.DefaultCellStyle = DataGridViewCellStyle1
         Me.rack_name.HeaderText = "Name"
         Me.rack_name.Name = "rack_name"
         Me.rack_name.ReadOnly = True
@@ -192,8 +197,8 @@ Partial Class frmRack
         'rack_desc
         '
         Me.rack_desc.DataPropertyName = "rack_desc"
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        Me.rack_desc.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        Me.rack_desc.DefaultCellStyle = DataGridViewCellStyle2
         Me.rack_desc.HeaderText = "Description"
         Me.rack_desc.Name = "rack_desc"
         Me.rack_desc.ReadOnly = True
@@ -320,6 +325,7 @@ Partial Class frmRack
         '
         Me.Panel6.BackColor = System.Drawing.Color.DimGray
         Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel6.Controls.Add(Me.txtProdId)
         Me.Panel6.Controls.Add(Me.txtLevelId)
         Me.Panel6.Controls.Add(Me.txtRackId)
         Me.Panel6.Controls.Add(Me.btnClose)
@@ -339,7 +345,6 @@ Partial Class frmRack
         Me.txtLevelId.Size = New System.Drawing.Size(100, 20)
         Me.txtLevelId.TabIndex = 38
         Me.txtLevelId.Text = "level id"
-        Me.txtLevelId.Visible = False
         '
         'txtRackId
         '
@@ -447,8 +452,8 @@ Partial Class frmRack
         'level_desc
         '
         Me.level_desc.DataPropertyName = "level_desc"
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        Me.level_desc.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        Me.level_desc.DefaultCellStyle = DataGridViewCellStyle3
         Me.level_desc.HeaderText = "Descripton"
         Me.level_desc.Name = "level_desc"
         Me.level_desc.ReadOnly = True
@@ -457,8 +462,8 @@ Partial Class frmRack
         'capacity
         '
         Me.capacity.DataPropertyName = "capacity"
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
-        Me.capacity.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        Me.capacity.DefaultCellStyle = DataGridViewCellStyle4
         Me.capacity.HeaderText = "Capacity"
         Me.capacity.Name = "capacity"
         Me.capacity.ReadOnly = True
@@ -466,8 +471,8 @@ Partial Class frmRack
         'rack
         '
         Me.rack.DataPropertyName = "rack_name"
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.White
-        Me.rack.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        Me.rack.DefaultCellStyle = DataGridViewCellStyle5
         Me.rack.HeaderText = "Rack"
         Me.rack.Name = "rack"
         Me.rack.ReadOnly = True
@@ -526,6 +531,38 @@ Partial Class frmRack
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(121, 155)
         Me.Panel1.TabIndex = 73
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(12, 146)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(81, 20)
+        Me.Label2.TabIndex = 43
+        Me.Label2.Text = "Product :"
+        '
+        'cmbProduct
+        '
+        Me.cmbProduct.BackColor = System.Drawing.SystemColors.Control
+        Me.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbProduct.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cmbProduct.FormattingEnabled = True
+        Me.cmbProduct.Location = New System.Drawing.Point(144, 143)
+        Me.cmbProduct.Name = "cmbProduct"
+        Me.cmbProduct.Size = New System.Drawing.Size(235, 28)
+        Me.cmbProduct.TabIndex = 66
+        '
+        'txtProdId
+        '
+        Me.txtProdId.Location = New System.Drawing.Point(598, 23)
+        Me.txtProdId.Name = "txtProdId"
+        Me.txtProdId.Size = New System.Drawing.Size(100, 20)
+        Me.txtProdId.TabIndex = 39
+        Me.txtProdId.Text = "product id"
         '
         'frmRack
         '
@@ -598,4 +635,7 @@ Partial Class frmRack
     Friend WithEvents level_desc As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents capacity As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents rack As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cmbProduct As System.Windows.Forms.ComboBox
+    Friend WithEvents txtProdId As System.Windows.Forms.TextBox
 End Class

@@ -182,7 +182,14 @@ Public Class frmStocks
             CloseCon()
         End If
     End Sub
-
+    Private Sub txtItemCode_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtItemCode.KeyPress
+        If Not Char.IsDigit(e.KeyChar) Then
+            If (e.KeyChar <> Convert.ToChar(Keys.Back)) Then
+                e.Handled = True
+                Return
+            End If
+        End If
+    End Sub
 
     Private Sub txtProductQuantity_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtProductQuantity.KeyPress
         If Not Char.IsDigit(e.KeyChar) Then
@@ -390,4 +397,7 @@ Public Class frmStocks
         mdiMain.btnProducts.PerformClick()
     End Sub
 
+    Private Sub frmStocks_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
