@@ -33,6 +33,7 @@ Public Class frmStocks
                         If row.Cells(0).FormattedValue <> "" Then
                             Dim strQryTable As String = "INSERT INTO stocks SET " _
                                                             & "prod_id = " & row.Cells(0).FormattedValue & ", " _
+                                                            & "item_code = " & row.Cells(1).FormattedValue & ", " _
                                                             & "rack_id = " & row.Cells(7).FormattedValue & ", " _
                                                             & "rack_name = '" & row.Cells(8).FormattedValue & "', " _
                                                             & "level_id = " & row.Cells(9).FormattedValue & ", " _
@@ -132,6 +133,7 @@ Public Class frmStocks
 
     Private Sub cmbRack_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbRack.SelectedIndexChanged
         Dim key As String = DirectCast(cmbRack.SelectedItem, KeyValuePair(Of String, String)).Key
+        MsgBox(key)
         If key <> "" And txtId.Text <> "" Then
             OpenCon()
             Try
@@ -297,7 +299,7 @@ Public Class frmStocks
             Dim level_name As String = DirectCast(cmbLevel.SelectedItem, KeyValuePair(Of String, String)).Value
             Dim rownum As Integer = dgvStocks.Rows.Add()
             dgvStocks.Rows.Item(rownum).Cells(0).Value = txtId.Text
-            dgvStocks.Rows.Item(rownum).Cells(1).Value = txtBarcode.Text
+            dgvStocks.Rows.Item(rownum).Cells(1).Value = txtItemCode.Text
             dgvStocks.Rows.Item(rownum).Cells(2).Value = txtProductName.Text
             dgvStocks.Rows.Item(rownum).Cells(3).Value = txtProductQuantity.Text
             dgvStocks.Rows.Item(rownum).Cells(4).Value = txtSupplierPrice.Text
@@ -400,4 +402,5 @@ Public Class frmStocks
     Private Sub frmStocks_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
+
 End Class

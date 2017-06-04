@@ -42,17 +42,6 @@ Partial Class frmStocks
         Me.txtBarcode = New System.Windows.Forms.TextBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.dgvStocks = New System.Windows.Forms.DataGridView()
-        Me.prod_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.prod_qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.supplierprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.retailprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.operation = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.rack_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rack_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.level_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.level_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.picProductImage = New System.Windows.Forms.PictureBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -79,6 +68,17 @@ Partial Class frmStocks
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.prod_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.item_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.prod_qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.supplierprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.retailprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.operation = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.rack_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rack_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.level_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.level_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlProductData.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -311,7 +311,7 @@ Partial Class frmStocks
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvStocks.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvStocks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvStocks.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prod_id, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.prod_qty, Me.supplierprice, Me.retailprice, Me.operation, Me.rack_id, Me.rack_name, Me.level_id, Me.level_name})
+        Me.dgvStocks.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prod_id, Me.item_code, Me.DataGridViewTextBoxColumn2, Me.prod_qty, Me.supplierprice, Me.retailprice, Me.operation, Me.rack_id, Me.rack_name, Me.level_id, Me.level_name})
         Me.dgvStocks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvStocks.Location = New System.Drawing.Point(525, 323)
         Me.dgvStocks.Name = "dgvStocks"
@@ -319,89 +319,6 @@ Partial Class frmStocks
         Me.dgvStocks.RowTemplate.Height = 20
         Me.dgvStocks.Size = New System.Drawing.Size(592, 283)
         Me.dgvStocks.TabIndex = 46
-        '
-        'prod_id
-        '
-        Me.prod_id.HeaderText = "ID"
-        Me.prod_id.Name = "prod_id"
-        Me.prod_id.ReadOnly = True
-        Me.prod_id.Visible = False
-        Me.prod_id.Width = 5
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "barcode"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Barcode"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 80
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "prod_name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Product Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 140
-        '
-        'prod_qty
-        '
-        Me.prod_qty.HeaderText = "Qty"
-        Me.prod_qty.Name = "prod_qty"
-        Me.prod_qty.ReadOnly = True
-        Me.prod_qty.Width = 60
-        '
-        'supplierprice
-        '
-        Me.supplierprice.HeaderText = "Supplier Price"
-        Me.supplierprice.Name = "supplierprice"
-        Me.supplierprice.ReadOnly = True
-        Me.supplierprice.Width = 80
-        '
-        'retailprice
-        '
-        Me.retailprice.HeaderText = "Retail Price"
-        Me.retailprice.Name = "retailprice"
-        Me.retailprice.ReadOnly = True
-        Me.retailprice.Width = 80
-        '
-        'operation
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.NullValue = "Remove"
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(3)
-        Me.operation.DefaultCellStyle = DataGridViewCellStyle2
-        Me.operation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.operation.HeaderText = "Option"
-        Me.operation.Name = "operation"
-        Me.operation.ReadOnly = True
-        Me.operation.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        '
-        'rack_id
-        '
-        Me.rack_id.HeaderText = "Rack ID"
-        Me.rack_id.Name = "rack_id"
-        Me.rack_id.ReadOnly = True
-        '
-        'rack_name
-        '
-        Me.rack_name.HeaderText = "Rack Name"
-        Me.rack_name.Name = "rack_name"
-        Me.rack_name.ReadOnly = True
-        '
-        'level_id
-        '
-        Me.level_id.HeaderText = "Level ID"
-        Me.level_id.Name = "level_id"
-        Me.level_id.ReadOnly = True
-        '
-        'level_name
-        '
-        Me.level_name.HeaderText = "Level Name"
-        Me.level_name.Name = "level_name"
-        Me.level_name.ReadOnly = True
         '
         'GroupBox1
         '
@@ -717,6 +634,89 @@ Partial Class frmStocks
         Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnClose.UseVisualStyleBackColor = False
         '
+        'prod_id
+        '
+        Me.prod_id.HeaderText = "ID"
+        Me.prod_id.Name = "prod_id"
+        Me.prod_id.ReadOnly = True
+        Me.prod_id.Visible = False
+        Me.prod_id.Width = 5
+        '
+        'item_code
+        '
+        Me.item_code.DataPropertyName = "item_code"
+        Me.item_code.HeaderText = "Item Code"
+        Me.item_code.Name = "item_code"
+        Me.item_code.ReadOnly = True
+        Me.item_code.Width = 80
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "prod_name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Product Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 140
+        '
+        'prod_qty
+        '
+        Me.prod_qty.HeaderText = "Qty"
+        Me.prod_qty.Name = "prod_qty"
+        Me.prod_qty.ReadOnly = True
+        Me.prod_qty.Width = 60
+        '
+        'supplierprice
+        '
+        Me.supplierprice.HeaderText = "Supplier Price"
+        Me.supplierprice.Name = "supplierprice"
+        Me.supplierprice.ReadOnly = True
+        Me.supplierprice.Width = 80
+        '
+        'retailprice
+        '
+        Me.retailprice.HeaderText = "Retail Price"
+        Me.retailprice.Name = "retailprice"
+        Me.retailprice.ReadOnly = True
+        Me.retailprice.Width = 80
+        '
+        'operation
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.NullValue = "Remove"
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(3)
+        Me.operation.DefaultCellStyle = DataGridViewCellStyle2
+        Me.operation.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.operation.HeaderText = "Option"
+        Me.operation.Name = "operation"
+        Me.operation.ReadOnly = True
+        Me.operation.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'rack_id
+        '
+        Me.rack_id.HeaderText = "Rack ID"
+        Me.rack_id.Name = "rack_id"
+        Me.rack_id.ReadOnly = True
+        '
+        'rack_name
+        '
+        Me.rack_name.HeaderText = "Rack Name"
+        Me.rack_name.Name = "rack_name"
+        Me.rack_name.ReadOnly = True
+        '
+        'level_id
+        '
+        Me.level_id.HeaderText = "Level ID"
+        Me.level_id.Name = "level_id"
+        Me.level_id.ReadOnly = True
+        '
+        'level_name
+        '
+        Me.level_name.HeaderText = "Level Name"
+        Me.level_name.Name = "level_name"
+        Me.level_name.ReadOnly = True
+        '
         'frmStocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -787,8 +787,10 @@ Partial Class frmStocks
     Friend WithEvents txtProductClass As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents txtRetailPrice As System.Windows.Forms.TextBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents txtItemCode As System.Windows.Forms.TextBox
     Friend WithEvents prod_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents item_code As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents prod_qty As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents supplierprice As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -798,6 +800,4 @@ Partial Class frmStocks
     Friend WithEvents rack_name As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents level_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents level_name As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents txtItemCode As System.Windows.Forms.TextBox
 End Class
