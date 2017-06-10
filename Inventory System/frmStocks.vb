@@ -133,7 +133,6 @@ Public Class frmStocks
 
     Private Sub cmbRack_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbRack.SelectedIndexChanged
         Dim key As String = DirectCast(cmbRack.SelectedItem, KeyValuePair(Of String, String)).Key
-        MsgBox(key)
         If key <> "" And txtId.Text <> "" Then
             OpenCon()
             Try
@@ -143,6 +142,7 @@ Public Class frmStocks
                 If myReader.HasRows Then
                     Dim cmbSource As New Dictionary(Of String, String)()
                     cmbSource.Add("", "Select Level")
+
                     While myReader.Read()
                         txtCapacity.Text = myReader("capacity").ToString
                         cmbSource.Add(myReader("id").ToString, myReader("level_name").ToString)
@@ -324,6 +324,7 @@ Public Class frmStocks
 
     Public Sub defaultSave()
         dgvStocks.Rows.Clear()
+        txtItemCode.Text = vbNullString
         btnAddProduct.Text = "&New"
         btnAddProduct.Image = My.Resources.Resources.cart_add
         pnlProductData.Enabled = False

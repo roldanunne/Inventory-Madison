@@ -22,21 +22,20 @@ Partial Class frmRack
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.gbxDetails = New System.Windows.Forms.GroupBox()
+        Me.cmbProduct = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtRackDesc = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtRackName = New System.Windows.Forms.TextBox()
         Me.btnAddLevel = New System.Windows.Forms.Button()
         Me.dgvRack = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rack_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rack_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlRackData = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ofdProfile = New System.Windows.Forms.OpenFileDialog()
@@ -49,6 +48,7 @@ Partial Class frmRack
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtLevelName = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.txtProdId = New System.Windows.Forms.TextBox()
         Me.txtLevelId = New System.Windows.Forms.TextBox()
         Me.txtRackId = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
@@ -56,19 +56,20 @@ Partial Class frmRack
         Me.btnAddSave = New System.Windows.Forms.Button()
         Me.btnCancelDelete = New System.Windows.Forms.Button()
         Me.dgvLevel = New System.Windows.Forms.DataGridView()
-        Me.level_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.level_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.level_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.capacity = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.rack = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.pnlRackLevel = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbProduct = New System.Windows.Forms.ComboBox()
-        Me.txtProdId = New System.Windows.Forms.TextBox()
+        Me.level_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.level_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.level_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.capacity = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rack = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rack_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.rack_desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.prod_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gbxDetails.SuspendLayout()
         CType(Me.dgvRack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlRackData.SuspendLayout()
@@ -98,6 +99,30 @@ Partial Class frmRack
         Me.gbxDetails.TabIndex = 40
         Me.gbxDetails.TabStop = False
         Me.gbxDetails.Text = "Rack Details"
+        '
+        'cmbProduct
+        '
+        Me.cmbProduct.BackColor = System.Drawing.SystemColors.Control
+        Me.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbProduct.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cmbProduct.FormattingEnabled = True
+        Me.cmbProduct.Location = New System.Drawing.Point(144, 143)
+        Me.cmbProduct.Name = "cmbProduct"
+        Me.cmbProduct.Size = New System.Drawing.Size(235, 28)
+        Me.cmbProduct.TabIndex = 66
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(12, 146)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(81, 20)
+        Me.Label2.TabIndex = 43
+        Me.Label2.Text = "Product :"
         '
         'Label6
         '
@@ -163,7 +188,7 @@ Partial Class frmRack
         Me.dgvRack.AllowUserToDeleteRows = False
         Me.dgvRack.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
         Me.dgvRack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.rack_name, Me.rack_desc})
+        Me.dgvRack.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.rack_name, Me.rack_desc, Me.prod_id})
         Me.dgvRack.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvRack.Location = New System.Drawing.Point(16, 29)
         Me.dgvRack.Name = "dgvRack"
@@ -174,35 +199,6 @@ Partial Class frmRack
         Me.dgvRack.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvRack.Size = New System.Drawing.Size(486, 246)
         Me.dgvRack.TabIndex = 27
-        '
-        'id
-        '
-        Me.id.DataPropertyName = "id"
-        Me.id.HeaderText = "Id"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        Me.id.Visible = False
-        Me.id.Width = 50
-        '
-        'rack_name
-        '
-        Me.rack_name.DataPropertyName = "rack_name"
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        Me.rack_name.DefaultCellStyle = DataGridViewCellStyle1
-        Me.rack_name.HeaderText = "Name"
-        Me.rack_name.Name = "rack_name"
-        Me.rack_name.ReadOnly = True
-        Me.rack_name.Width = 200
-        '
-        'rack_desc
-        '
-        Me.rack_desc.DataPropertyName = "rack_desc"
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        Me.rack_desc.DefaultCellStyle = DataGridViewCellStyle2
-        Me.rack_desc.HeaderText = "Description"
-        Me.rack_desc.Name = "rack_desc"
-        Me.rack_desc.ReadOnly = True
-        Me.rack_desc.Width = 240
         '
         'pnlRackData
         '
@@ -338,6 +334,14 @@ Partial Class frmRack
         Me.Panel6.Size = New System.Drawing.Size(1140, 64)
         Me.Panel6.TabIndex = 71
         '
+        'txtProdId
+        '
+        Me.txtProdId.Location = New System.Drawing.Point(598, 23)
+        Me.txtProdId.Name = "txtProdId"
+        Me.txtProdId.Size = New System.Drawing.Size(100, 20)
+        Me.txtProdId.TabIndex = 39
+        Me.txtProdId.Text = "product id"
+        '
         'txtLevelId
         '
         Me.txtLevelId.Location = New System.Drawing.Point(470, 25)
@@ -353,7 +357,6 @@ Partial Class frmRack
         Me.txtRackId.Size = New System.Drawing.Size(100, 20)
         Me.txtRackId.TabIndex = 37
         Me.txtRackId.Text = "rack id"
-        Me.txtRackId.Visible = False
         '
         'btnClose
         '
@@ -432,51 +435,6 @@ Partial Class frmRack
         Me.dgvLevel.Size = New System.Drawing.Size(554, 246)
         Me.dgvLevel.TabIndex = 27
         '
-        'level_id
-        '
-        Me.level_id.DataPropertyName = "level_id"
-        Me.level_id.HeaderText = "Id"
-        Me.level_id.Name = "level_id"
-        Me.level_id.ReadOnly = True
-        Me.level_id.Visible = False
-        Me.level_id.Width = 50
-        '
-        'level_name
-        '
-        Me.level_name.DataPropertyName = "level_name"
-        Me.level_name.HeaderText = "Name"
-        Me.level_name.Name = "level_name"
-        Me.level_name.ReadOnly = True
-        Me.level_name.Width = 190
-        '
-        'level_desc
-        '
-        Me.level_desc.DataPropertyName = "level_desc"
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        Me.level_desc.DefaultCellStyle = DataGridViewCellStyle3
-        Me.level_desc.HeaderText = "Descripton"
-        Me.level_desc.Name = "level_desc"
-        Me.level_desc.ReadOnly = True
-        Me.level_desc.Width = 220
-        '
-        'capacity
-        '
-        Me.capacity.DataPropertyName = "capacity"
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        Me.capacity.DefaultCellStyle = DataGridViewCellStyle4
-        Me.capacity.HeaderText = "Capacity"
-        Me.capacity.Name = "capacity"
-        Me.capacity.ReadOnly = True
-        '
-        'rack
-        '
-        Me.rack.DataPropertyName = "rack_name"
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        Me.rack.DefaultCellStyle = DataGridViewCellStyle5
-        Me.rack.HeaderText = "Rack"
-        Me.rack.Name = "rack"
-        Me.rack.ReadOnly = True
-        '
         'txtSearch
         '
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -532,37 +490,87 @@ Partial Class frmRack
         Me.Panel1.Size = New System.Drawing.Size(121, 155)
         Me.Panel1.TabIndex = 73
         '
-        'Label2
+        'level_id
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(12, 146)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 20)
-        Me.Label2.TabIndex = 43
-        Me.Label2.Text = "Product :"
+        Me.level_id.DataPropertyName = "id"
+        Me.level_id.HeaderText = "Id"
+        Me.level_id.Name = "level_id"
+        Me.level_id.ReadOnly = True
+        Me.level_id.Visible = False
+        Me.level_id.Width = 50
         '
-        'cmbProduct
+        'level_name
         '
-        Me.cmbProduct.BackColor = System.Drawing.SystemColors.Control
-        Me.cmbProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbProduct.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.cmbProduct.FormattingEnabled = True
-        Me.cmbProduct.Location = New System.Drawing.Point(144, 143)
-        Me.cmbProduct.Name = "cmbProduct"
-        Me.cmbProduct.Size = New System.Drawing.Size(235, 28)
-        Me.cmbProduct.TabIndex = 66
+        Me.level_name.DataPropertyName = "level_name"
+        Me.level_name.HeaderText = "Name"
+        Me.level_name.Name = "level_name"
+        Me.level_name.ReadOnly = True
+        Me.level_name.Width = 190
         '
-        'txtProdId
+        'level_desc
         '
-        Me.txtProdId.Location = New System.Drawing.Point(598, 23)
-        Me.txtProdId.Name = "txtProdId"
-        Me.txtProdId.Size = New System.Drawing.Size(100, 20)
-        Me.txtProdId.TabIndex = 39
-        Me.txtProdId.Text = "product id"
+        Me.level_desc.DataPropertyName = "level_desc"
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        Me.level_desc.DefaultCellStyle = DataGridViewCellStyle3
+        Me.level_desc.HeaderText = "Descripton"
+        Me.level_desc.Name = "level_desc"
+        Me.level_desc.ReadOnly = True
+        Me.level_desc.Width = 220
+        '
+        'capacity
+        '
+        Me.capacity.DataPropertyName = "capacity"
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        Me.capacity.DefaultCellStyle = DataGridViewCellStyle4
+        Me.capacity.HeaderText = "Capacity"
+        Me.capacity.Name = "capacity"
+        Me.capacity.ReadOnly = True
+        '
+        'rack
+        '
+        Me.rack.DataPropertyName = "rack_name"
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        Me.rack.DefaultCellStyle = DataGridViewCellStyle5
+        Me.rack.HeaderText = "Rack"
+        Me.rack.Name = "rack"
+        Me.rack.ReadOnly = True
+        '
+        'id
+        '
+        Me.id.DataPropertyName = "id"
+        Me.id.HeaderText = "Id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Visible = False
+        Me.id.Width = 50
+        '
+        'rack_name
+        '
+        Me.rack_name.DataPropertyName = "rack_name"
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        Me.rack_name.DefaultCellStyle = DataGridViewCellStyle1
+        Me.rack_name.HeaderText = "Name"
+        Me.rack_name.Name = "rack_name"
+        Me.rack_name.ReadOnly = True
+        Me.rack_name.Width = 150
+        '
+        'rack_desc
+        '
+        Me.rack_desc.DataPropertyName = "rack_desc"
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        Me.rack_desc.DefaultCellStyle = DataGridViewCellStyle2
+        Me.rack_desc.HeaderText = "Description"
+        Me.rack_desc.Name = "rack_desc"
+        Me.rack_desc.ReadOnly = True
+        Me.rack_desc.Width = 290
+        '
+        'prod_id
+        '
+        Me.prod_id.DataPropertyName = "prod_id"
+        Me.prod_id.HeaderText = "Product"
+        Me.prod_id.Name = "prod_id"
+        Me.prod_id.ReadOnly = True
+        Me.prod_id.Visible = False
         '
         'frmRack
         '
@@ -626,16 +634,17 @@ Partial Class frmRack
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtRackId As System.Windows.Forms.TextBox
     Friend WithEvents txtLevelId As System.Windows.Forms.TextBox
-    Friend WithEvents id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rack_name As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents rack_desc As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cmbProduct As System.Windows.Forms.ComboBox
+    Friend WithEvents txtProdId As System.Windows.Forms.TextBox
     Friend WithEvents level_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents level_name As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents level_desc As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents capacity As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents rack As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents cmbProduct As System.Windows.Forms.ComboBox
-    Friend WithEvents txtProdId As System.Windows.Forms.TextBox
+    Friend WithEvents id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents rack_name As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents rack_desc As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents prod_id As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

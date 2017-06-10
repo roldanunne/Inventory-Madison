@@ -69,7 +69,6 @@ Partial Class frmStocks
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.prod_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.item_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.prod_qty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.supplierprice = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -79,6 +78,7 @@ Partial Class frmStocks
         Me.rack_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.level_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.level_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.item_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlProductData.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -311,7 +311,7 @@ Partial Class frmStocks
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvStocks.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvStocks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvStocks.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prod_id, Me.item_code, Me.DataGridViewTextBoxColumn2, Me.prod_qty, Me.supplierprice, Me.retailprice, Me.operation, Me.rack_id, Me.rack_name, Me.level_id, Me.level_name})
+        Me.dgvStocks.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.prod_id, Me.DataGridViewTextBoxColumn2, Me.prod_qty, Me.supplierprice, Me.retailprice, Me.operation, Me.rack_id, Me.rack_name, Me.level_id, Me.level_name, Me.item_code})
         Me.dgvStocks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgvStocks.Location = New System.Drawing.Point(525, 323)
         Me.dgvStocks.Name = "dgvStocks"
@@ -369,9 +369,9 @@ Partial Class frmStocks
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(35, 22)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(94, 20)
+        Me.Label13.Size = New System.Drawing.Size(79, 20)
         Me.Label13.TabIndex = 67
-        Me.Label13.Text = "Item Code"
+        Me.Label13.Text = "Barcode"
         '
         'txtItemCode
         '
@@ -642,14 +642,6 @@ Partial Class frmStocks
         Me.prod_id.Visible = False
         Me.prod_id.Width = 5
         '
-        'item_code
-        '
-        Me.item_code.DataPropertyName = "item_code"
-        Me.item_code.HeaderText = "Item Code"
-        Me.item_code.Name = "item_code"
-        Me.item_code.ReadOnly = True
-        Me.item_code.Width = 80
-        '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "prod_name"
@@ -716,6 +708,14 @@ Partial Class frmStocks
         Me.level_name.HeaderText = "Level Name"
         Me.level_name.Name = "level_name"
         Me.level_name.ReadOnly = True
+        '
+        'item_code
+        '
+        Me.item_code.DataPropertyName = "item_code"
+        Me.item_code.HeaderText = "Item Code"
+        Me.item_code.Name = "item_code"
+        Me.item_code.ReadOnly = True
+        Me.item_code.Width = 80
         '
         'frmStocks
         '
@@ -790,7 +790,6 @@ Partial Class frmStocks
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents txtItemCode As System.Windows.Forms.TextBox
     Friend WithEvents prod_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents item_code As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents prod_qty As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents supplierprice As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -800,4 +799,5 @@ Partial Class frmStocks
     Friend WithEvents rack_name As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents level_id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents level_name As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents item_code As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

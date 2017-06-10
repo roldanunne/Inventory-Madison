@@ -15,12 +15,12 @@ Public Class frmRack
         cmbProduct.SelectedIndex = 0
     End Sub
     Private Sub loadRack()
-        Dim query As String = "rack.id,rack_name,rack_desc"
+        Dim query As String = "rack.id,rack_name,rack_desc,prod_id"
         modSqlFunction.loadData("rack", query, dgvRack)
     End Sub
     Private Sub loadLevel()
         Dim table As String = "rack_level INNER JOIN rack ON rack.id=rack_level.rack_id"
-        Dim query As String = "level_id,level_name,level_desc,capacity,rack_name"
+        Dim query As String = "rack_level.id,level_name,level_desc,capacity,rack_name"
         modSqlFunction.loadData(table, query, dgvLevel)
     End Sub
     Private Sub setFromDefault()
@@ -29,6 +29,7 @@ Public Class frmRack
         pnlRackData.Enabled = False
         pnlLevelData.Enabled = False
         pnlRackLevel.Enabled = True
+        cmbProduct.SelectedIndex = 0
         btnAddSave.Text = "&New"
         btnAddSave.Image = My.Resources.server_add
         btnAddSave.BackColor = Color.ForestGreen
@@ -39,6 +40,7 @@ Public Class frmRack
     Private Sub setBtnSaveUpdate()
         btnAddLevel.Enabled = True
         pnlRackData.Enabled = True
+        pnlRackLevel.Enabled = False
         btnAddSave.Image = My.Resources.server_check
         btnAddSave.BackColor = Color.RoyalBlue
         btnCancelDelete.Text = "&Cancel"
@@ -89,6 +91,7 @@ Public Class frmRack
     Private Sub btnAddSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddSave.Click
         If btnAddSave.Text = "&New" Then
             setBtnSaveUpdate()
+            cmbProduct.SelectedIndex = 0
             btnAddSave.Text = "&Save"
             modFormFuction.setClearAll(Me)
         ElseIf btnAddSave.Text = "&Save" Then
@@ -130,7 +133,7 @@ Public Class frmRack
                 End If
             ElseIf Not txtRackId.Text = "" And pnlRackData.Enabled = False Then
                 saveLevel(Convert.ToInt32(txtRackId.Text))
-               
+
             End If
         ElseIf btnAddSave.Text = "&Update" Then
             If Not txtRackId.Text = "" And pnlLevelData.Enabled = False Then
@@ -140,7 +143,7 @@ Public Class frmRack
                     Try
                         OpenCon()
                         Dim strQryTable As String = "UPDATE rack SET rack_name = '" & txtRackName.Text & "', rack_desc = '" & txtRackDesc.Text &
-                            "', employee_id = '" & modLoginCtlr.user_id & "', date_updated = '" & currentDate & "' WHERE id = '" & txtRackId.Text & "'"
+                            "', employee_id = '" & modLoginCtlr.user_id & "', date_updated = '" & currentDate & "', prod_id = '" & txtProdId.Text & "' WHERE id = '" & txtRackId.Text & "'"
                         Dim myCommand As New MySqlCommand(strQryTable, dbCon)
                         myCommand.ExecuteNonQuery()
                         MessageBox.Show("Record Updated", "MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -159,7 +162,7 @@ Public Class frmRack
                     Try
                         OpenCon()
                         Dim strQryTable As String = "UPDATE rack_level SET level_name = '" & txtLevelName.Text & "', level_desc = '" & txtLevelDesc.Text &
-                            "', capacity = '" & txtLevelCapacity.Text & "', employee_id = '" & modLoginCtlr.user_id & "', date_updated = '" & currentDate & "' WHERE level_id = '" & txtLevelId.Text & "'"
+                            "', capacity = '" & txtLevelCapacity.Text & "', employee_id = '" & modLoginCtlr.user_id & "', date_updated = '" & currentDate & "' WHERE rack_level.id = '" & txtLevelId.Text & "'"
                         Dim myCommand As New MySqlCommand(strQryTable, dbCon)
                         myCommand.ExecuteNonQuery()
                         MessageBox.Show("Record Updated", "MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -182,6 +185,7 @@ Public Class frmRack
             txtRackId.Text = row.Cells("id").Value.ToString
             txtRackName.Text = row.Cells("rack_name").Value.ToString
             txtRackDesc.Text = row.Cells("rack_desc").Value.ToString
+            txtProdId.Text = row.Cells("prod_id").Value.ToString
             btnAddLevel.Enabled = True
         End If
 
@@ -200,6 +204,8 @@ Public Class frmRack
     End Sub
     Private Sub dgvLevel_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvLevel.CellClick
         clearRack()
+        cmbProduct.SelectedIndex = 0
+        txtProdId.Text = ""
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow
             row = Me.dgvLevel.Rows(e.RowIndex)
@@ -254,7 +260,7 @@ Public Class frmRack
                 End If
             ElseIf Not txtLevelId.Text = "" Then
                 If MessageBox.Show("Do You Want to DELETE this Record...?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = vbYes Then
-                    modSqlFunction.deleteData("rack_level", "level_id", txtLevelId.Text)
+                    modSqlFunction.deleteData("rack_level", "id", txtLevelId.Text)
                 End If
                 loadLevel()
             Else
@@ -283,8 +289,8 @@ Public Class frmRack
     Private Sub txtSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearch.TextChanged
         Dim tblRack As String = "rack WHERE rack_name LIKE '%" & txtSearch.Text & "%' or rack_desc LIKE '%" & txtSearch.Text & "%'"
         Dim tblLevel As String = "rack_level INNER JOIN rack ON rack.id=rack_level.rack_id WHERE level_name LIKE '%" & txtSearch.Text & "%' or rack_name LIKE '%" & txtSearch.Text & "%'"
-        modSqlFunction.loadData(tblRack, "id,rack_name,rack_desc", dgvRack)
-        modSqlFunction.loadData(tblLevel, "level_id,level_name, level_desc, capacity, rack_name", dgvLevel)
+        modSqlFunction.loadData(tblRack, "id,rack_name,rack_desc,prod_id", dgvRack)
+        modSqlFunction.loadData(tblLevel, "rack_level.id,level_name, level_desc, capacity, rack_name", dgvLevel)
     End Sub
     Private Sub clearLevel()
         txtLevelId.Text = vbNullString
@@ -301,5 +307,9 @@ Public Class frmRack
         If Not cmbProduct.Text = "Select Product" Then
             retrieveSingleData("product", "prod_name", cmbProduct.Text, "id", txtProdId.Text)
         End If
+    End Sub
+
+    Private Sub txtProdId_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtProdId.TextChanged
+        retrieveSingleData("product", "id", txtProdId.Text, "prod_name", cmbProduct.Text)
     End Sub
 End Class
