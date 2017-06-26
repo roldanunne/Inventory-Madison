@@ -197,7 +197,7 @@ Partial Class mdiMain
         Me.btnHome.ForeColor = System.Drawing.Color.White
         Me.btnHome.Image = CType(resources.GetObject("btnHome.Image"), System.Drawing.Image)
         Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHome.Location = New System.Drawing.Point(0, 5)
+        Me.btnHome.Location = New System.Drawing.Point(1, 3)
         Me.btnHome.Name = "btnHome"
         Me.btnHome.Padding = New System.Windows.Forms.Padding(10, 3, 10, 3)
         Me.btnHome.Size = New System.Drawing.Size(209, 58)

@@ -23,7 +23,7 @@ Public Class frmBranch
         btnDelete.Text = "&Delete"
         btnDelete.BackColor = Color.Coral
         btnAddBranch.Text = "&New"
-        btnAddBranch.Image = My.Resources.Resources.plus_house
+        btnAddBranch.Image = My.Resources.plus_house
         btnAddBranch.BackColor = Color.ForestGreen
 
     End Sub

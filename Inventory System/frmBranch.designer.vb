@@ -290,7 +290,6 @@ Partial Class frmBranch
         Me.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.Color.White
-        Me.btnDelete.Image = Global.Inventory_System.My.Resources.Resources.minus_house
         Me.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDelete.Location = New System.Drawing.Point(910, 9)
         Me.btnDelete.Name = "btnDelete"
@@ -307,7 +306,6 @@ Partial Class frmBranch
         Me.btnAddBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddBranch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddBranch.ForeColor = System.Drawing.Color.White
-        Me.btnAddBranch.Image = Global.Inventory_System.My.Resources.Resources.plus_house
         Me.btnAddBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAddBranch.Location = New System.Drawing.Point(769, 9)
         Me.btnAddBranch.Name = "btnAddBranch"
@@ -324,7 +322,6 @@ Partial Class frmBranch
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.White
-        Me.btnClose.Image = Global.Inventory_System.My.Resources.Resources.close_icon
         Me.btnClose.Location = New System.Drawing.Point(1080, 9)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(47, 47)

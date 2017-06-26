@@ -13,7 +13,7 @@
         If modFormFuction.setIsTextEmpty(Me) = True Then
             MessageBox.Show("Please Enter Username or Password.", "ERROR MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error)
         ElseIf modLoginCtlr.getLogin(txtUsername.Text, txtPassword.Text) = True Then
-            mdiMain.Show()
+            MDIHome.Show()
             Me.Close()
         Else
             MessageBox.Show("Please Check User Name or Password if correct...", "LogIn", MessageBoxButtons.OK, MessageBoxIcon.Question)

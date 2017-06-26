@@ -104,12 +104,12 @@ Public Class mdiMain
 
     Private Sub btnEmployee_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEmployee.Click
         btnNavMin.PerformClick()
-        closeLastFrm(frmEmployee)
+        closeLastFrm(frmEmployee1)
         pnlMain.Controls.Clear()
-        frmEmployee.TopLevel = False
-        frmEmployee.TopMost = True
-        pnlMain.Controls.Add(frmEmployee)
-        frmEmployee.Show()
+        frmEmployee1.TopLevel = False
+        frmEmployee1.TopMost = True
+        pnlMain.Controls.Add(frmEmployee1)
+        frmEmployee1.Show()
         button_active = 1
         button_hover()
         btnEmployee.BackgroundImage = My.Resources.snav_btn_active
@@ -125,12 +125,12 @@ Public Class mdiMain
     End Sub
     Private Sub btnSupplier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupplier.Click
         btnNavMin.PerformClick()
-        closeLastFrm(frmSupplier)
+        closeLastFrm(frmSupplier1)
         pnlMain.Controls.Clear()
-        frmSupplier.TopLevel = False
-        frmSupplier.TopMost = True
-        pnlMain.Controls.Add(frmSupplier)
-        frmSupplier.Show()
+        frmSupplier1.TopLevel = False
+        frmSupplier1.TopMost = True
+        pnlMain.Controls.Add(frmSupplier1)
+        frmSupplier1.Show()
         button_active = 2
         button_hover()
         btnSupplier.BackgroundImage = My.Resources.snav_btn_active
@@ -211,7 +211,12 @@ Public Class mdiMain
 
     Private Sub btnStocks_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStocks.Click
         btnNavMin.PerformClick()
-        
+        closeLastFrm(frmStocks)
+        pnlMain.Controls.Clear()
+        frmStocks.TopLevel = False
+        frmStocks.TopMost = True
+        pnlMain.Controls.Add(frmStocks)
+        frmStocks.Show()
         button_active = 6
         button_hover()
         btnStocks.BackgroundImage = My.Resources.snav_btn_active

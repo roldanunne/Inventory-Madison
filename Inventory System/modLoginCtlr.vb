@@ -3,6 +3,8 @@
 Module modLoginCtlr
     Public user_id = ""
     Public user_access = ""
+    Public user_name = ""
+    Public user_fullname = ""
     Public imgPath = "C:\ProgramData\Madison"
 
 
@@ -19,6 +21,8 @@ Module modLoginCtlr
                 myReader.Read()
                 user_id = myReader("id")
                 user_access = myReader("user_access")
+                user_name = StrConv(myReader("username"), VbStrConv.ProperCase)
+                user_fullname = StrConv(myReader("fname"), VbStrConv.ProperCase) & " " & StrConv(myReader("lname"), VbStrConv.ProperCase)
                 getLogin = True
             End If
             myReader.Close()

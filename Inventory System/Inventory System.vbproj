@@ -105,6 +105,18 @@
   <ItemGroup>
     <Compile Include="Code128Content.vb" />
     <Compile Include="Code128Rendering.vb" />
+    <Compile Include="frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeModal.Designer.vb">
+      <DependentUpon>frmEmployeeModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBranch.designer.vb">
       <DependentUpon>frmBranch.vb</DependentUpon>
     </Compile>
@@ -165,10 +177,10 @@
     <Compile Include="frmStocks.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupplier.Designer.vb">
-      <DependentUpon>frmSupplier.vb</DependentUpon>
+    <Compile Include="frmSupplier1.Designer.vb">
+      <DependentUpon>frmSupplier1.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplier.vb">
+    <Compile Include="frmSupplier1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="madisonData.Designer.vb">
@@ -181,6 +193,12 @@
       <DependentUpon>mdiMain.vb</DependentUpon>
     </Compile>
     <Compile Include="mdiMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIHome.Designer.vb">
+      <DependentUpon>MDIHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIHome.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modEmployeeCtlr.vb" />
@@ -212,11 +230,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -237,6 +250,12 @@
     <Compile Include="Rfc4810Writer.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeModal.resx">
+      <DependentUpon>frmEmployeeModal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBranch.resx">
       <DependentUpon>frmBranch.vb</DependentUpon>
     </EmbeddedResource>
@@ -276,17 +295,19 @@
     <EmbeddedResource Include="frmStocks.resx">
       <DependentUpon>frmStocks.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplier.resx">
-      <DependentUpon>frmSupplier.vb</DependentUpon>
+    <EmbeddedResource Include="frmSupplier1.resx">
+      <DependentUpon>frmSupplier1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiMain.resx">
       <DependentUpon>mdiMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MDIHome.resx">
+      <DependentUpon>MDIHome.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="popLogFiles.resx">
       <DependentUpon>popLogFiles.vb</DependentUpon>
@@ -312,88 +333,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="resource\btnStockout.psd" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\back1600.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\btnAccount.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\btnProducts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\btnReport.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\btnStockin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\btnStockout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\footer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\head.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\header.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\key.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\Koala.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\login.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\menu_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\menuback.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\RQtk0vZ.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\samp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\sidebar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\sidebarmenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\sidemenu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\stock_in.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\tire.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\upload.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="resource\userwhite.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
@@ -480,28 +419,10 @@
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dark_background_lines_rays_points_gray_10563_2560x1024.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\frame.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stripes_lines.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\stripes_lines.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new-user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save-user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\remove-user.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error.png" />
@@ -514,9 +435,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\open-folder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_report.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\market-research.png" />
@@ -638,6 +556,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cart-cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\madison-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cogwheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm_employee.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

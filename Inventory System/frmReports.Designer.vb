@@ -28,6 +28,7 @@ Partial Class frmReports
         Me.madisonData = New Inventory_System.madisonData()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtStateGo = New System.Windows.Forms.TextBox()
         Me.txtReportName = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.rvReport = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -61,7 +62,6 @@ Partial Class frmReports
         Me.supplierBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.productBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.branchBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.txtStateGo = New System.Windows.Forms.TextBox()
         CType(Me.queryDeliveryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.madisonData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -113,6 +113,13 @@ Partial Class frmReports
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1140, 63)
         Me.Panel2.TabIndex = 62
+        '
+        'txtStateGo
+        '
+        Me.txtStateGo.Location = New System.Drawing.Point(299, 17)
+        Me.txtStateGo.Name = "txtStateGo"
+        Me.txtStateGo.Size = New System.Drawing.Size(100, 20)
+        Me.txtStateGo.TabIndex = 36
         '
         'txtReportName
         '
@@ -483,13 +490,6 @@ Partial Class frmReports
         '
         Me.branchBindingSource.DataMember = "branch"
         Me.branchBindingSource.DataSource = Me.madisonData
-        '
-        'txtStateGo
-        '
-        Me.txtStateGo.Location = New System.Drawing.Point(299, 17)
-        Me.txtStateGo.Name = "txtStateGo"
-        Me.txtStateGo.Size = New System.Drawing.Size(100, 20)
-        Me.txtStateGo.TabIndex = 36
         '
         'frmReports
         '
