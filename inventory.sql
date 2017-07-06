@@ -134,7 +134,7 @@ CREATE TABLE `inventory_adjustment` (
   `prod_id` int(11) NOT NULL,
   `employee_id` int(11) NOT NULL,
   `date_created` datetime NOT NULL,
-  `date_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date_updated` datetime NOT NULL  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -155,7 +155,7 @@ CREATE TABLE `logfile` (
   `log_id` int(11) NOT NULL,
   `log_file` text NOT NULL,
   `user_id` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` timestamp NOT NULL  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -252,7 +252,7 @@ CREATE TABLE `rack` (
   `rack_name` text NOT NULL,
   `rack_desc` text NOT NULL,
   `date_created` datetime NOT NULL,
-  `date_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_updated` datetime NOT NULL  ,
   `employee_id` int(11) NOT NULL,
   `prod_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -279,7 +279,7 @@ CREATE TABLE `rack_level` (
   `level_desc` text NOT NULL,
   `capacity` int(11) NOT NULL,
   `date_created` datetime NOT NULL,
-  `date_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_updated` datetime NOT NULL  ,
   `employee_id` int(11) NOT NULL,
   `rack_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -369,7 +369,7 @@ CREATE TABLE `stocks` (
   `reference` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL  
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

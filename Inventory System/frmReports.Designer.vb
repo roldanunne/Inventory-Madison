@@ -24,6 +24,7 @@ Partial Class frmReports
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+
         Me.queryDeliveryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.madisonData = New Inventory_System.madisonData()
         Me.Label7 = New System.Windows.Forms.Label()

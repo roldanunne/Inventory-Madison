@@ -199,3 +199,37 @@ C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\D
 C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.exe
 C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.xml
 C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.pdb
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\bin\Debug\Inventory System.exe.config
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\bin\Debug\Inventory System.exe
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\bin\Debug\Inventory System.pdb
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\bin\Debug\Inventory System.xml
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmBranchModal.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmBranch.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSupplierModal.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSupplier.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmBranch1.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmCancelationDelivery.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmEmployee.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmEmployee1.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmEmployeeModal.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmInventoryAdjustment.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmLogin.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmLogin1.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmMain.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProductProperties.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmDelivery.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProducts.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmRack.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmReports.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSearchProduct.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmStocks.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSupplier1.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.MDIHome.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.mdiMain.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.Resources.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.popLogFiles.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProductRackLevel.resources
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.vbproj.GenerateResource.Cache
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\Users\Lazir\Documents\GitHub\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.pdb

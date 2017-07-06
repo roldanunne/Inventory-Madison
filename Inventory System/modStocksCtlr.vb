@@ -1,18 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Module modStocksCtlr
-    Public Function getStockInfo(ByVal strQry As String) As MySqlDataReader
-        Try
-            OpenCon()
-            Dim myCommand As New MySqlCommand(strQry, dbCon)
-            myCommand.ExecuteNonQuery()
-            getStockInfo = myCommand.ExecuteReader
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message & " -- Database Error")
-        End Try
-        CloseCon()
-        Return getStockInfo
-    End Function
+   
 
     Public Function updateEmployee(ByVal id As String,
                                    ByVal fname As String,
