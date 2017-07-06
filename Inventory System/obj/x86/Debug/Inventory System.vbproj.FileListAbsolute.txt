@@ -166,3 +166,36 @@ C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProductR
 C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.vbproj.GenerateResource.Cache
 C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmInventoryAdjustment.resources
 C:\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmReports.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\bin\Debug\Inventory System.exe
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\bin\Debug\Inventory System.pdb
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\bin\Debug\Inventory System.xml
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmBranchModal.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmBranch.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSupplierModal.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSupplier.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmBranch1.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmCancelationDelivery.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmEmployee.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmEmployee1.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmEmployeeModal.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmInventoryAdjustment.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmLogin.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmLogin1.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmMain.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProductProperties.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmDelivery.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProducts.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmRack.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmReports.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSearchProduct.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmStocks.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmSupplier1.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.MDIHome.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.mdiMain.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.Resources.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.popLogFiles.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory_System.frmProductRackLevel.resources
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.vbproj.GenerateResource.Cache
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.exe
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.xml
+C:\VB.Net Project\Inventory-Madison\Inventory-Madison\Inventory System\obj\x86\Debug\Inventory System.pdb

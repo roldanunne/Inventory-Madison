@@ -1,8 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Module modLoginCtlr
-    Public user_id = ""
-    Public user_access = ""
+    Public USER_ID = ""
+    Public USER_ACCESS = ""
+    Public USER_NAME = ""
+    Public USER_FULLNAME = ""
     Public imgPath = "C:\ProgramData\Madison"
 
 
@@ -17,8 +19,10 @@ Module modLoginCtlr
             myReader = myCommand.ExecuteReader
             If myReader.HasRows Then
                 myReader.Read()
-                user_id = myReader("id")
-                user_access = myReader("user_access")
+                USER_ID = myReader("id")
+                USER_ACCESS = myReader("useraccess")
+                USER_NAME = StrConv(myReader("username"), VbStrConv.ProperCase)
+                USER_FULLNAME = StrConv(myReader("fname"), VbStrConv.ProperCase) & " " & StrConv(myReader("lname"), VbStrConv.ProperCase)
                 getLogin = True
             End If
             myReader.Close()
@@ -30,4 +34,3 @@ Module modLoginCtlr
     End Function
 
 End Module
- 

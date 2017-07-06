@@ -15,6 +15,10 @@ Module modFormFuction
         panelData.BringToFront()
     End Sub
 
+    Public Sub setCenterModalForm(ByVal frm1 As Form, ByVal frm2 As Form)
+        frm2.Location = New Point((frm1.Width / 2) - (frm2.Width / 2) + 113, (frm1.Height / 2) - (frm2.Height / 2))
+    End Sub
+
     Public Sub setLocked(ByVal ctrlContainer As Control, ByVal bolValue As Boolean)
         For Each ctrl As Control In ctrlContainer.Controls
             If TypeOf ctrl Is TextBox Then

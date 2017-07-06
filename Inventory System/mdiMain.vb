@@ -104,12 +104,12 @@ Public Class mdiMain
 
     Private Sub btnEmployee_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEmployee.Click
         btnNavMin.PerformClick()
-        closeLastFrm(frmEmployee)
+        closeLastFrm(frmEmployee1)
         pnlMain.Controls.Clear()
-        frmEmployee.TopLevel = False
-        frmEmployee.TopMost = True
-        pnlMain.Controls.Add(frmEmployee)
-        frmEmployee.Show()
+        frmEmployee1.TopLevel = False
+        frmEmployee1.TopMost = True
+        pnlMain.Controls.Add(frmEmployee1)
+        frmEmployee1.Show()
         button_active = 1
         button_hover()
         btnEmployee.BackgroundImage = My.Resources.snav_btn_active
@@ -146,12 +146,12 @@ Public Class mdiMain
     End Sub
     Private Sub btnBranch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBranch.Click
         btnNavMin.PerformClick()
-        closeLastFrm(frmBranch)
+        closeLastFrm(frmBranch1)
         pnlMain.Controls.Clear()
-        frmBranch.TopLevel = False
-        frmBranch.TopMost = True
-        pnlMain.Controls.Add(frmBranch)
-        frmBranch.Show()
+        frmBranch1.TopLevel = False
+        frmBranch1.TopMost = True
+        pnlMain.Controls.Add(frmBranch1)
+        frmBranch1.Show()
         button_active = 3
         button_hover()
         btnBranch.BackgroundImage = My.Resources.snav_btn_active

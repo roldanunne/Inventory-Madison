@@ -320,7 +320,7 @@ Partial Class mdiMain
         Me.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReport.ForeColor = System.Drawing.Color.White
-        Me.btnReport.Image = Global.Inventory_System.My.Resources.Resources.ic_report
+        Me.btnReport.Image = Global.Inventory_System.My.Resources.Resources.ic_reports
         Me.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnReport.Location = New System.Drawing.Point(0, 453)
         Me.btnReport.Name = "btnReport"

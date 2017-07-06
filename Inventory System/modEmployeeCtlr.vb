@@ -20,11 +20,11 @@ Module modEmployeeCtlr
                                 "       lname       = '" & lname & "', " &
                                 "       gender      = '" & gender & "', " &
                                 "       address     = '" & address & "', " &
-                                "       user_access = '" & menus & "', " &
+                                "       useraccess  = '" & menus & "', " &
                                 "       username    = '" & username & "', " &
                                 "       password    = '" & password & "', " &
                                 "       status      = '" & status & "', " &
-                                "       created_at  = '" & Format(Now, "yyyy-MM-dd") & "' "
+                                "       dt_created  = '" & Format(Now, "yyyy-MM-dd hh:mm:ss") & "' "
 
             Dim myCommand As New MySqlCommand(sql, dbCon)
             myCommand.ExecuteNonQuery()
@@ -57,10 +57,11 @@ Module modEmployeeCtlr
                                 "       lname       = '" & lname & "', " &
                                 "       gender      = '" & gender & "', " &
                                 "       address     = '" & address & "', " &
-                                "       user_access = '" & menus & "', " &
+                                "       useraccess  = '" & menus & "', " &
                                 "       username    = '" & username & "', " &
                                 "       password    = '" & password & "', " &
-                                "       status      = '" & status & "'  " &
+                                "       status      = '" & status & "',  " &
+                                "       dt_updated  = '" & Format(Now, "yyyy-MM-dd hh:mm:ss") & "' " &
                                 "   WHERE " &
                                 "       id      = " & id & " "
 
@@ -93,7 +94,7 @@ Module modEmployeeCtlr
     Public Sub loadEmployee(ByVal dgView As DataGridView)
         Try
             OpenCon()
-            Dim sql As String = "SELECT id, fname, lname, gender, address, user_access, username, password, status, IF(status = 0, 'Inactive', 'Active') AS stat FROM employee WHERE delete_flag=0 "
+            Dim sql As String = "SELECT id, fname, lname, gender, address, useraccess, username, password, status, IF(status = 0, 'Inactive', 'Active') AS stat FROM employee WHERE delete_flag=0 "
             Dim mydataAdapter As New MySqlDataAdapter(sql, dbCon)
             Dim myDataTable As New DataTable
             mydataAdapter.Fill(myDataTable)

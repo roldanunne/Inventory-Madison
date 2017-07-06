@@ -22,174 +22,376 @@ Partial Class frmBranch
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtBranchContact = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtBranchName = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.gbxList = New System.Windows.Forms.GroupBox()
+        Me.dgvBranch = New System.Windows.Forms.DataGridView()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.contact = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.stat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtBranchAddress = New System.Windows.Forms.TextBox()
-        Me.pnlBranchData = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtBranchCode = New System.Windows.Forms.TextBox()
-        Me.pnlBrachGrid = New System.Windows.Forms.Panel()
-        Me.dvgBranch = New System.Windows.Forms.DataGridView()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtSearchBranch = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.branch_code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.branch_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.branch_address = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.branch_contact = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.gbxDetails = New System.Windows.Forms.GroupBox()
+        Me.lblStatus = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblAddress = New System.Windows.Forms.Label()
+        Me.lblContact = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnNew = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnAddBranch = New System.Windows.Forms.Button()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.Panel2.SuspendLayout()
-        Me.pnlBranchData.SuspendLayout()
-        Me.pnlBrachGrid.SuspendLayout()
-        CType(Me.dvgBranch, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.picLogo = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ofdProfile = New System.Windows.Forms.OpenFileDialog()
+        Me.Panel3.SuspendLayout()
+        Me.gbxList.SuspendLayout()
+        CType(Me.dgvBranch, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gbxDetails.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label2
+        'Panel3
         '
-        Me.Label2.Location = New System.Drawing.Point(0, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 23)
-        Me.Label2.TabIndex = 0
+        Me.Panel3.AutoScroll = True
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Controls.Add(Me.gbxList)
+        Me.Panel3.Controls.Add(Me.gbxDetails)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Panel3.Location = New System.Drawing.Point(3, 51)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(5)
+        Me.Panel3.Size = New System.Drawing.Size(1135, 651)
+        Me.Panel3.TabIndex = 55
         '
-        'Label4
+        'gbxList
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(566, 34)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(149, 20)
-        Me.Label4.TabIndex = 57
-        Me.Label4.Text = "Contact Number :"
+        Me.gbxList.BackColor = System.Drawing.Color.White
+        Me.gbxList.Controls.Add(Me.dgvBranch)
+        Me.gbxList.Controls.Add(Me.Label3)
+        Me.gbxList.Controls.Add(Me.txtSearch)
+        Me.gbxList.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.gbxList.Location = New System.Drawing.Point(16, 179)
+        Me.gbxList.Name = "gbxList"
+        Me.gbxList.Size = New System.Drawing.Size(1079, 455)
+        Me.gbxList.TabIndex = 57
+        Me.gbxList.TabStop = False
         '
-        'txtBranchContact
+        'dgvBranch
         '
-        Me.txtBranchContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBranchContact.Location = New System.Drawing.Point(749, 28)
-        Me.txtBranchContact.Name = "txtBranchContact"
-        Me.txtBranchContact.Size = New System.Drawing.Size(269, 29)
-        Me.txtBranchContact.TabIndex = 56
+        Me.dgvBranch.AllowUserToAddRows = False
+        Me.dgvBranch.AllowUserToDeleteRows = False
+        Me.dgvBranch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBranch.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvBranch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBranch.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.name, Me.address, Me.contact, Me.stat, Me.status})
+        Me.dgvBranch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.dgvBranch.Location = New System.Drawing.Point(17, 55)
+        Me.dgvBranch.Name = "dgvBranch"
+        Me.dgvBranch.ReadOnly = True
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.CornflowerBlue
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBranch.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvBranch.RowTemplate.Height = 20
+        Me.dgvBranch.Size = New System.Drawing.Size(1045, 386)
+        Me.dgvBranch.TabIndex = 58
         '
-        'Label1
+        'id
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(29, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(127, 20)
-        Me.Label1.TabIndex = 55
-        Me.Label1.Text = "Branch Name :"
+        Me.id.DataPropertyName = "id"
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.id.DefaultCellStyle = DataGridViewCellStyle2
+        Me.id.HeaderText = "Id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Width = 50
         '
-        'txtBranchName
+        'name
         '
-        Me.txtBranchName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBranchName.Location = New System.Drawing.Point(198, 28)
-        Me.txtBranchName.Name = "txtBranchName"
-        Me.txtBranchName.Size = New System.Drawing.Size(269, 29)
-        Me.txtBranchName.TabIndex = 54
+        Me.name.DataPropertyName = "name"
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.name.DefaultCellStyle = DataGridViewCellStyle3
+        Me.name.HeaderText = "Branch Name"
+        Me.name.Name = "name"
+        Me.name.ReadOnly = True
+        Me.name.Width = 280
         '
-        'Panel2
+        'address
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DimGray
-        Me.Panel2.Controls.Add(Me.btnClose)
-        Me.Panel2.Controls.Add(Me.btnDelete)
-        Me.Panel2.Controls.Add(Me.btnAddBranch)
-        Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.ForeColor = System.Drawing.Color.LightGray
-        Me.Panel2.Location = New System.Drawing.Point(17, 12)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1140, 64)
-        Me.Panel2.TabIndex = 62
+        Me.address.DataPropertyName = "address"
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.address.DefaultCellStyle = DataGridViewCellStyle4
+        Me.address.HeaderText = "Address"
+        Me.address.Name = "address"
+        Me.address.ReadOnly = True
+        Me.address.Width = 280
+        '
+        'contact
+        '
+        Me.contact.DataPropertyName = "contact"
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.contact.DefaultCellStyle = DataGridViewCellStyle5
+        Me.contact.HeaderText = "Contact"
+        Me.contact.Name = "contact"
+        Me.contact.ReadOnly = True
+        Me.contact.Width = 120
+        '
+        'stat
+        '
+        Me.stat.DataPropertyName = "stat"
+        Me.stat.HeaderText = "Status"
+        Me.stat.Name = "stat"
+        Me.stat.ReadOnly = True
+        '
+        'status
+        '
+        Me.status.DataPropertyName = "status"
+        Me.status.HeaderText = "Status"
+        Me.status.Name = "status"
+        Me.status.ReadOnly = True
+        Me.status.Visible = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(29, 83)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label3.Location = New System.Drawing.Point(16, 25)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 20)
-        Me.Label3.TabIndex = 59
-        Me.Label3.Text = "Address :"
+        Me.Label3.Size = New System.Drawing.Size(65, 16)
+        Me.Label3.TabIndex = 56
+        Me.Label3.Text = "Search :"
         '
-        'txtBranchAddress
+        'txtSearch
         '
-        Me.txtBranchAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBranchAddress.Location = New System.Drawing.Point(198, 77)
-        Me.txtBranchAddress.Multiline = True
-        Me.txtBranchAddress.Name = "txtBranchAddress"
-        Me.txtBranchAddress.Size = New System.Drawing.Size(269, 65)
-        Me.txtBranchAddress.TabIndex = 58
+        Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.txtSearch.Location = New System.Drawing.Point(87, 19)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(390, 26)
+        Me.txtSearch.TabIndex = 55
         '
-        'pnlBranchData
+        'gbxDetails
         '
-        Me.pnlBranchData.BackColor = System.Drawing.Color.DimGray
-        Me.pnlBranchData.Controls.Add(Me.GroupBox1)
-        Me.pnlBranchData.Location = New System.Drawing.Point(17, 147)
-        Me.pnlBranchData.Name = "pnlBranchData"
-        Me.pnlBranchData.Size = New System.Drawing.Size(1140, 243)
-        Me.pnlBranchData.TabIndex = 63
+        Me.gbxDetails.Controls.Add(Me.lblStatus)
+        Me.gbxDetails.Controls.Add(Me.Label10)
+        Me.gbxDetails.Controls.Add(Me.lblAddress)
+        Me.gbxDetails.Controls.Add(Me.lblContact)
+        Me.gbxDetails.Controls.Add(Me.lblName)
+        Me.gbxDetails.Controls.Add(Me.Label2)
+        Me.gbxDetails.Controls.Add(Me.Label1)
+        Me.gbxDetails.Controls.Add(Me.Label4)
+        Me.gbxDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gbxDetails.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.gbxDetails.Location = New System.Drawing.Point(18, 15)
+        Me.gbxDetails.Name = "gbxDetails"
+        Me.gbxDetails.Size = New System.Drawing.Size(1077, 143)
+        Me.gbxDetails.TabIndex = 40
+        Me.gbxDetails.TabStop = False
+        Me.gbxDetails.Text = "Details"
         '
-        'Label6
+        'lblStatus
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(27, 23)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(162, 25)
-        Me.Label6.TabIndex = 61
-        Me.Label6.Text = "Branch Code :"
+        Me.lblStatus.BackColor = System.Drawing.Color.White
+        Me.lblStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStatus.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.lblStatus.Location = New System.Drawing.Point(531, 103)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(231, 22)
+        Me.lblStatus.TabIndex = 60
         '
-        'txtBranchCode
+        'Label10
         '
-        Me.txtBranchCode.BackColor = System.Drawing.Color.Black
-        Me.txtBranchCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBranchCode.ForeColor = System.Drawing.Color.Lime
-        Me.txtBranchCode.Location = New System.Drawing.Point(223, 11)
-        Me.txtBranchCode.Name = "txtBranchCode"
-        Me.txtBranchCode.ReadOnly = True
-        Me.txtBranchCode.Size = New System.Drawing.Size(280, 44)
-        Me.txtBranchCode.TabIndex = 60
-        Me.txtBranchCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label10.Location = New System.Drawing.Point(529, 81)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(51, 16)
+        Me.Label10.TabIndex = 59
+        Me.Label10.Text = "Status"
         '
-        'pnlBrachGrid
+        'lblAddress
         '
-        Me.pnlBrachGrid.BackColor = System.Drawing.Color.DimGray
-        Me.pnlBrachGrid.Controls.Add(Me.dvgBranch)
-        Me.pnlBrachGrid.Controls.Add(Me.Label5)
-        Me.pnlBrachGrid.Controls.Add(Me.txtSearchBranch)
-        Me.pnlBrachGrid.Location = New System.Drawing.Point(17, 396)
-        Me.pnlBrachGrid.Name = "pnlBrachGrid"
-        Me.pnlBrachGrid.Size = New System.Drawing.Size(1140, 330)
-        Me.pnlBrachGrid.TabIndex = 64
+        Me.lblAddress.BackColor = System.Drawing.Color.White
+        Me.lblAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAddress.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.lblAddress.Location = New System.Drawing.Point(15, 103)
+        Me.lblAddress.Name = "lblAddress"
+        Me.lblAddress.Size = New System.Drawing.Size(470, 22)
+        Me.lblAddress.TabIndex = 54
         '
-        'dvgBranch
+        'lblContact
         '
-        Me.dvgBranch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dvgBranch.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.branch_code, Me.branch_name, Me.branch_address, Me.branch_contact})
-        Me.dvgBranch.Location = New System.Drawing.Point(16, 66)
-        Me.dvgBranch.Name = "dvgBranch"
-        Me.dvgBranch.ReadOnly = True
-        Me.dvgBranch.Size = New System.Drawing.Size(1096, 241)
-        Me.dvgBranch.TabIndex = 62
+        Me.lblContact.BackColor = System.Drawing.Color.White
+        Me.lblContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContact.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.lblContact.Location = New System.Drawing.Point(532, 46)
+        Me.lblContact.Name = "lblContact"
+        Me.lblContact.Size = New System.Drawing.Size(230, 22)
+        Me.lblContact.TabIndex = 53
+        '
+        'lblName
+        '
+        Me.lblName.BackColor = System.Drawing.Color.White
+        Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.lblName.Location = New System.Drawing.Point(15, 48)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(470, 22)
+        Me.lblName.TabIndex = 52
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label2.Location = New System.Drawing.Point(529, 28)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(60, 16)
+        Me.Label2.TabIndex = 44
+        Me.Label2.Text = "Contact"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label1.Location = New System.Drawing.Point(12, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(101, 16)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "Branch Name"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Label4.Location = New System.Drawing.Point(12, 82)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(66, 16)
+        Me.Label4.TabIndex = 40
+        Me.Label4.Text = "Address"
+        '
+        'btnNew
+        '
+        Me.btnNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNew.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNew.ForeColor = System.Drawing.Color.White
+        Me.btnNew.Image = Global.Inventory_System.My.Resources.Resources.branch_new
+        Me.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNew.Location = New System.Drawing.Point(819, 7)
+        Me.btnNew.Name = "btnNew"
+        Me.btnNew.Size = New System.Drawing.Size(99, 34)
+        Me.btnNew.TabIndex = 1
+        Me.btnNew.Text = "New"
+        Me.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnNew.UseVisualStyleBackColor = False
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnDelete.BackColor = System.Drawing.Color.Coral
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.ForeColor = System.Drawing.Color.White
+        Me.btnDelete.Image = Global.Inventory_System.My.Resources.Resources.branch_delete
+        Me.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDelete.Location = New System.Drawing.Point(1029, 7)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(99, 34)
+        Me.btnDelete.TabIndex = 33
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel6.Controls.Add(Me.btnEdit)
+        Me.Panel6.Controls.Add(Me.picLogo)
+        Me.Panel6.Controls.Add(Me.Label5)
+        Me.Panel6.Controls.Add(Me.btnNew)
+        Me.Panel6.Controls.Add(Me.btnDelete)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel6.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Panel6.Location = New System.Drawing.Point(3, 3)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(1135, 48)
+        Me.Panel6.TabIndex = 64
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEdit.BackColor = System.Drawing.Color.Purple
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.ForeColor = System.Drawing.Color.White
+        Me.btnEdit.Image = Global.Inventory_System.My.Resources.Resources.branch_save
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.Location = New System.Drawing.Point(924, 7)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(99, 34)
+        Me.btnEdit.TabIndex = 74
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'picLogo
+        '
+        Me.picLogo.BackColor = System.Drawing.Color.Transparent
+        Me.picLogo.Image = Global.Inventory_System.My.Resources.Resources.frm_branch
+        Me.picLogo.Location = New System.Drawing.Point(16, 3)
+        Me.picLogo.Name = "picLogo"
+        Me.picLogo.Padding = New System.Windows.Forms.Padding(5)
+        Me.picLogo.Size = New System.Drawing.Size(42, 42)
+        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picLogo.TabIndex = 73
+        Me.picLogo.TabStop = False
         '
         'Label5
         '
@@ -197,191 +399,70 @@ Partial Class frmBranch
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(28, 27)
+        Me.Label5.Location = New System.Drawing.Point(73, 13)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(160, 24)
-        Me.Label5.TabIndex = 61
-        Me.Label5.Text = "Search Branch :"
+        Me.Label5.Size = New System.Drawing.Size(156, 24)
+        Me.Label5.TabIndex = 72
+        Me.Label5.Text = "Branch Settings"
         '
-        'txtSearchBranch
+        'ofdProfile
         '
-        Me.txtSearchBranch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchBranch.Location = New System.Drawing.Point(223, 23)
-        Me.txtSearchBranch.Name = "txtSearchBranch"
-        Me.txtSearchBranch.Size = New System.Drawing.Size(357, 31)
-        Me.txtSearchBranch.TabIndex = 60
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.txtBranchCode)
-        Me.Panel1.Location = New System.Drawing.Point(17, 86)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1140, 68)
-        Me.Panel1.TabIndex = 69
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(25, 17)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(125, 37)
-        Me.Label9.TabIndex = 35
-        Me.Label9.Text = "Branch"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txtBranchContact)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtBranchAddress)
-        Me.GroupBox1.Controls.Add(Me.txtBranchName)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(25, 18)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1087, 157)
-        Me.GroupBox1.TabIndex = 60
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Details"
-        '
-        'branch_code
-        '
-        Me.branch_code.DataPropertyName = "branch_code"
-        Me.branch_code.HeaderText = "Branch Code"
-        Me.branch_code.Name = "branch_code"
-        Me.branch_code.ReadOnly = True
-        Me.branch_code.Width = 200
-        '
-        'branch_name
-        '
-        Me.branch_name.DataPropertyName = "branch_name"
-        Me.branch_name.HeaderText = "Branch name"
-        Me.branch_name.Name = "branch_name"
-        Me.branch_name.ReadOnly = True
-        Me.branch_name.Width = 220
-        '
-        'branch_address
-        '
-        Me.branch_address.DataPropertyName = "branch_address"
-        Me.branch_address.FillWeight = 200.0!
-        Me.branch_address.HeaderText = "Address"
-        Me.branch_address.Name = "branch_address"
-        Me.branch_address.ReadOnly = True
-        Me.branch_address.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.branch_address.Width = 430
-        '
-        'branch_contact
-        '
-        Me.branch_contact.DataPropertyName = "branch_contact"
-        Me.branch_contact.HeaderText = "Contact"
-        Me.branch_contact.Name = "branch_contact"
-        Me.branch_contact.ReadOnly = True
-        Me.branch_contact.Width = 200
-        '
-        'btnDelete
-        '
-        Me.btnDelete.BackColor = System.Drawing.Color.Coral
-        Me.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.ForeColor = System.Drawing.Color.White
-        Me.btnDelete.Image = Global.Inventory_System.My.Resources.Resources.minus_house
-        Me.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDelete.Location = New System.Drawing.Point(910, 9)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(125, 47)
-        Me.btnDelete.TabIndex = 75
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnDelete.UseVisualStyleBackColor = False
-        '
-        'btnAddBranch
-        '
-        Me.btnAddBranch.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnAddBranch.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAddBranch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddBranch.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddBranch.ForeColor = System.Drawing.Color.White
-        Me.btnAddBranch.Image = Global.Inventory_System.My.Resources.Resources.plus_house
-        Me.btnAddBranch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddBranch.Location = New System.Drawing.Point(769, 9)
-        Me.btnAddBranch.Name = "btnAddBranch"
-        Me.btnAddBranch.Size = New System.Drawing.Size(125, 47)
-        Me.btnAddBranch.TabIndex = 74
-        Me.btnAddBranch.Text = "New"
-        Me.btnAddBranch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAddBranch.UseVisualStyleBackColor = False
-        '
-        'btnClose
-        '
-        Me.btnClose.AutoSize = True
-        Me.btnClose.BackColor = System.Drawing.Color.Red
-        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClose.ForeColor = System.Drawing.Color.White
-        Me.btnClose.Image = Global.Inventory_System.My.Resources.Resources.close_icon
-        Me.btnClose.Location = New System.Drawing.Point(1080, 9)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(47, 47)
-        Me.btnClose.TabIndex = 77
-        Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnClose.UseVisualStyleBackColor = False
+        Me.ofdProfile.FileName = "OpenPic"
+        Me.ofdProfile.Filter = "File Images (*.jpg;*.jpeg;) | *.jpg;*.jpeg; |PNG Images | *.png |GIF Images | *.G" & _
+            "IF"""
         '
         'frmBranch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1207, 780)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.pnlBrachGrid)
-        Me.Controls.Add(Me.pnlBranchData)
-        Me.Controls.Add(Me.Panel2)
-        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AutoScroll = True
+        Me.AutoSize = True
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ClientSize = New System.Drawing.Size(1141, 705)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel6)
+        Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "frmBranch"
-        Me.Padding = New System.Windows.Forms.Padding(20)
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.pnlBranchData.ResumeLayout(False)
-        Me.pnlBrachGrid.ResumeLayout(False)
-        Me.pnlBrachGrid.PerformLayout()
-        CType(Me.dvgBranch, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.Padding = New System.Windows.Forms.Padding(3)
+        Me.Panel3.ResumeLayout(False)
+        Me.gbxList.ResumeLayout(False)
+        Me.gbxList.PerformLayout()
+        CType(Me.dgvBranch, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gbxDetails.ResumeLayout(False)
+        Me.gbxDetails.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents txtBranchContact As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents txtBranchName As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txtBranchAddress As System.Windows.Forms.TextBox
-    Friend WithEvents pnlBranchData As System.Windows.Forms.Panel
-    Friend WithEvents pnlBrachGrid As System.Windows.Forms.Panel
-    Friend WithEvents dvgBranch As System.Windows.Forms.DataGridView
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents txtSearchBranch As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtBranchCode As System.Windows.Forms.TextBox
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents branch_code As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents branch_name As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents branch_address As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents branch_contact As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btnDelete As System.Windows.Forms.Button
-    Friend WithEvents btnAddBranch As System.Windows.Forms.Button
-    Friend WithEvents btnClose As System.Windows.Forms.Button
+    Friend WithEvents Panel6 As System.Windows.Forms.Panel
+    Friend WithEvents btnNew As System.Windows.Forms.Button
+    Friend WithEvents gbxDetails As System.Windows.Forms.GroupBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents ofdProfile As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents gbxList As System.Windows.Forms.GroupBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents picLogo As System.Windows.Forms.PictureBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents lblAddress As System.Windows.Forms.Label
+    Friend WithEvents lblContact As System.Windows.Forms.Label
+    Friend WithEvents lblName As System.Windows.Forms.Label
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents dgvBranch As System.Windows.Forms.DataGridView
+    Friend WithEvents lblStatus As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents name As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents address As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents contact As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents stat As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents status As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

@@ -105,10 +105,36 @@
   <ItemGroup>
     <Compile Include="Code128Content.vb" />
     <Compile Include="Code128Rendering.vb" />
-    <Compile Include="frmBranch.designer.vb">
+    <Compile Include="frmBranchModal.Designer.vb">
+      <DependentUpon>frmBranchModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranchModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranch.Designer.vb">
       <DependentUpon>frmBranch.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBranch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modBranchCtlr.vb" />
+    <Compile Include="frmSupplierModal.Designer.vb">
+      <DependentUpon>frmSupplierModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplierModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modSupplierCtlr.vb" />
+    <Compile Include="frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranch1.designer.vb">
+      <DependentUpon>frmBranch1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranch1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCancelationDelivery.designer.vb">
@@ -117,10 +143,28 @@
     <Compile Include="frmCancelationDelivery.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeModal.Designer.vb">
+      <DependentUpon>frmEmployeeModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmInventoryAdjustment.Designer.vb">
       <DependentUpon>frmInventoryAdjustment.vb</DependentUpon>
     </Compile>
     <Compile Include="frmInventoryAdjustment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.vb">
@@ -165,10 +209,10 @@
     <Compile Include="frmStocks.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupplier.Designer.vb">
-      <DependentUpon>frmSupplier.vb</DependentUpon>
+    <Compile Include="frmSupplier1.Designer.vb">
+      <DependentUpon>frmSupplier1.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplier.vb">
+    <Compile Include="frmSupplier1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="madisonData.Designer.vb">
@@ -177,6 +221,12 @@
     <Compile Include="madisonData.vb">
       <DependentUpon>madisonData.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MDIHome.Designer.vb">
+      <DependentUpon>MDIHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mdiMain.Designer.vb">
       <DependentUpon>mdiMain.vb</DependentUpon>
     </Compile>
@@ -184,16 +234,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modEmployeeCtlr.vb" />
-    <Compile Include="frmEmployee.Designer.vb">
-      <DependentUpon>frmEmployee.vb</DependentUpon>
+    <Compile Include="frmEmployee1.Designer.vb">
+      <DependentUpon>frmEmployee1.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEmployee.vb">
+    <Compile Include="frmEmployee1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.vb">
-      <DependentUpon>frmLogin.vb</DependentUpon>
+    <Compile Include="frmLogin1.Designer.vb">
+      <DependentUpon>frmLogin1.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.vb">
+    <Compile Include="frmLogin1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDelivery.Designer.vb">
@@ -237,8 +287,20 @@
     <Compile Include="Rfc4810Writer.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmBranchModal.resx">
+      <DependentUpon>frmBranchModal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBranch.resx">
       <DependentUpon>frmBranch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierModal.resx">
+      <DependentUpon>frmSupplierModal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBranch1.resx">
+      <DependentUpon>frmBranch1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCancelationDelivery.resx">
       <DependentUpon>frmCancelationDelivery.vb</DependentUpon>
@@ -246,11 +308,20 @@
     <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee1.resx">
+      <DependentUpon>frmEmployee1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeModal.resx">
+      <DependentUpon>frmEmployeeModal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInventoryAdjustment.resx">
       <DependentUpon>frmInventoryAdjustment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin1.resx">
+      <DependentUpon>frmLogin1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -276,8 +347,11 @@
     <EmbeddedResource Include="frmStocks.resx">
       <DependentUpon>frmStocks.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplier.resx">
-      <DependentUpon>frmSupplier.vb</DependentUpon>
+    <EmbeddedResource Include="frmSupplier1.resx">
+      <DependentUpon>frmSupplier1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIHome.resx">
+      <DependentUpon>MDIHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiMain.resx">
       <DependentUpon>mdiMain.vb</DependentUpon>
@@ -480,15 +554,6 @@
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dark_background_lines_rays_points_gray_10563_2560x1024.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\frame.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stripes_lines.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\stripes_lines.png" />
   </ItemGroup>
   <ItemGroup>
@@ -514,9 +579,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\open-folder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ic_report.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\market-research.png" />
@@ -638,6 +700,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cart-cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\madison-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-branches.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic-rack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm-supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm-employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm-branch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frm-rack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\branch-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\branch-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\branch-new.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -52,10 +52,10 @@
 
         'show form in pnlViewForm
         pnlViewForm.Controls.Clear()
-        frmEmployee.TopLevel = False
-        frmEmployee.TopMost = True
-        Me.pnlViewForm.Controls.Add(frmEmployee)
-        frmEmployee.Show()
+        frmEmployee1.TopLevel = False
+        frmEmployee1.TopMost = True
+        Me.pnlViewForm.Controls.Add(frmEmployee1)
+        frmEmployee1.Show()
 
     End Sub
 
