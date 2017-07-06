@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2017 at 01:50 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: Jul 06, 2017 at 04:28 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,23 +27,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `branch` (
-  `branch_id` int(11) NOT NULL,
-  `branch_code` text NOT NULL,
-  `branch_name` text NOT NULL,
-  `branch_address` text NOT NULL,
-  `branch_contact` varchar(15) NOT NULL,
-  `date_created` datetime NOT NULL,
-  `date_updated` datetime NOT NULL,
-  `employee_id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `address` text NOT NULL,
+  `contact` text NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `delete_flag` int(11) NOT NULL,
+  `dt_created` datetime NOT NULL,
+  `dt_updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `branch`
 --
 
-INSERT INTO `branch` (`branch_id`, `branch_code`, `branch_name`, `branch_address`, `branch_contact`, `date_created`, `date_updated`, `employee_id`) VALUES
-(870, '5BPHMXL0AN', 'mmm', 'm', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 110),
-(871, 'GB8GDD1C', 'Bayambang', 'Bayambang, Pangasinan', '0099', '2017-03-14 22:07:45', '2017-03-14 22:07:45', 110);
+INSERT INTO `branch` (`id`, `name`, `address`, `contact`, `status`, `created_by`, `delete_flag`, `dt_created`, `dt_updated`) VALUES
+(870, 'mmm', 'm', '034343434343', 0, 110, 0, '0000-00-00 00:00:00', '2017-07-04 09:37:19'),
+(871, 'Bayambang', 'Bayambang, Pangasinan', '0099', 2147483647, 110, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -96,24 +97,25 @@ CREATE TABLE `employee` (
   `lname` varchar(255) NOT NULL,
   `gender` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `user_access` varchar(255) NOT NULL,
+  `useraccess` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `status` tinyint(4) NOT NULL COMMENT '1=Active 0=Not Active',
   `delete_flag` tinyint(1) NOT NULL COMMENT '1=Deleted 0=Not Deleted',
-  `created_at` datetime NOT NULL,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `dt_created` datetime NOT NULL,
+  `dt_updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`id`, `fname`, `lname`, `gender`, `address`, `user_access`, `username`, `password`, `status`, `delete_flag`, `created_at`, `updated_at`) VALUES
-(1, 'Superadmin', 'Superadmin', '', '', '1,2,3,4,5,6,7,8,9,10,', 'admin', 'admin', 1, 0, '0000-00-00 00:00:00', '2017-02-23 06:50:27'),
-(2, 'Sunny', 'Ang', 'Male', 'Madizon Calasiao', '1,2,3,4,', 'sunny', 'sunny', 1, 0, '2017-03-08 00:00:00', '2017-03-07 14:32:10'),
-(3, 'New', 'Test', 'Male', 'New Test Address', '1,2,5,', 'test', 'test', 1, 0, '2017-03-17 00:00:00', '2017-03-16 00:45:46'),
-(4, 'Mike', 'Junio', 'Male', 'Calasiao', '3,4,5,', 'mike', 'mike', 1, 0, '2017-03-17 00:00:00', '2017-03-16 10:15:29');
+INSERT INTO `employee` (`id`, `fname`, `lname`, `gender`, `address`, `useraccess`, `username`, `password`, `status`, `delete_flag`, `dt_created`, `dt_updated`) VALUES
+(1, 'Superadmin', 'Superadmin', 'Female', 'This is a test address og superadmin', '1,2,3,4,5,6,7,8,', 'admin', 'admin', 1, 0, '0000-00-00 00:00:00', '2017-07-04 10:20:47'),
+(2, 'Sunny', 'Ang', 'Male', 'Madizon Calasiao', '1,2,3,4,5,', 'ang', 'ang', 1, 0, '2017-03-08 00:00:00', '2017-07-04 10:21:04'),
+(3, 'New', 'Test', 'Male', 'New Test Address', '1,2,5,', 'test', 'test', 1, 0, '2017-03-17 00:00:00', '2017-07-04 10:10:20'),
+(4, 'Mike', 'Junio', 'Male', 'Calasiao', '3,4,5,', 'mike', 'mike', 0, 1, '2017-03-17 00:00:00', '2017-03-16 18:15:29'),
+(5, 'This Is', 'Test', 'Male', 'This is a test address', '1,2,3,4,5,7,8,', 'test', 'test', 1, 0, '2017-06-26 00:00:00', '2017-07-04 09:40:37');
 
 -- --------------------------------------------------------
 
@@ -237,7 +239,7 @@ CREATE TABLE `prod_properties` (
 INSERT INTO `prod_properties` (`prop_id`, `prop_name`, `prop_value`, `barcode`) VALUES
 (7, 'mmmmm', 'mmmmm', '1'),
 (11, 'bbmkmk', 'kmkmkm', '4767048620'),
-(12, 'Height', '12\"', '5518201832');
+(12, 'Height', '12"', '5518201832');
 
 -- --------------------------------------------------------
 
@@ -272,7 +274,7 @@ INSERT INTO `rack` (`id`, `rack_name`, `rack_desc`, `date_created`, `date_update
 --
 
 CREATE TABLE `rack_level` (
-  `level_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `level_name` text NOT NULL,
   `level_desc` text NOT NULL,
   `capacity` int(11) NOT NULL,
@@ -286,7 +288,7 @@ CREATE TABLE `rack_level` (
 -- Dumping data for table `rack_level`
 --
 
-INSERT INTO `rack_level` (`level_id`, `level_name`, `level_desc`, `capacity`, `date_created`, `date_updated`, `employee_id`, `rack_id`) VALUES
+INSERT INTO `rack_level` (`id`, `level_name`, `level_desc`, `capacity`, `date_created`, `date_updated`, `employee_id`, `rack_id`) VALUES
 (11, '1', 'Electrical Materials', 200, '2017-03-17 14:21:35', '2017-03-17 14:21:35', 1, 49),
 (12, '2', 'Turbines', 150, '2017-03-17 14:21:35', '0000-00-00 00:00:00', 1, 49),
 (13, 'mm', 'njnj', 9, '2017-03-20 11:22:44', '0000-00-00 00:00:00', 1, 1),
@@ -387,19 +389,26 @@ INSERT INTO `stocks` (`id`, `prod_id`, `rack_id`, `rack_name`, `level_id`, `leve
 --
 
 CREATE TABLE `supplier` (
-  `sup_id` int(11) NOT NULL,
-  `sup_name` text NOT NULL,
-  `sup_address` text NOT NULL,
-  `sup_contact` int(15) NOT NULL
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `address` text NOT NULL,
+  `contact` text NOT NULL,
+  `status` int(11) NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `delete_flag` int(11) NOT NULL,
+  `dt_created` datetime NOT NULL,
+  `dt_updated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `supplier`
 --
 
-INSERT INTO `supplier` (`sup_id`, `sup_name`, `sup_address`, `sup_contact`) VALUES
-(3, 'Auto Mechanic', 'Calasiao, Pangasinan', 8811),
-(6, 'Motoposh', 'Makati', 909);
+INSERT INTO `supplier` (`id`, `name`, `address`, `contact`, `status`, `created_by`, `delete_flag`, `dt_created`, `dt_updated`) VALUES
+(3, 'Auto Mechanic', 'Calasiao, Pangasinan', '88112323232', 0, 0, 0, '2017-07-10 00:00:00', '2017-07-04 09:28:18'),
+(6, 'Motoposh', 'Makati', '09098765433', 1, 0, 0, '2017-07-03 00:00:00', '2017-07-04 09:28:22'),
+(7, 'test ko lang', 'This is a test address', '2323232323', 0, 0, 1, '2017-07-02 00:00:00', '2017-07-02 00:00:00'),
+(8, 'Test', 'Test', '343434', 1, 0, 0, '2017-07-04 09:28:08', '2017-07-04 09:28:27');
 
 --
 -- Indexes for dumped tables
@@ -409,7 +418,7 @@ INSERT INTO `supplier` (`sup_id`, `sup_name`, `sup_address`, `sup_contact`) VALU
 -- Indexes for table `branch`
 --
 ALTER TABLE `branch`
-  ADD PRIMARY KEY (`branch_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `delivery`
@@ -469,7 +478,7 @@ ALTER TABLE `rack`
 -- Indexes for table `rack_level`
 --
 ALTER TABLE `rack_level`
-  ADD PRIMARY KEY (`level_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `reference`
@@ -493,7 +502,7 @@ ALTER TABLE `stocks`
 -- Indexes for table `supplier`
 --
 ALTER TABLE `supplier`
-  ADD PRIMARY KEY (`sup_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -503,7 +512,7 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT for table `branch`
 --
 ALTER TABLE `branch`
-  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=872;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=872;
 --
 -- AUTO_INCREMENT for table `delivery`
 --
@@ -523,7 +532,7 @@ ALTER TABLE `delivery_report`
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `inventory_adjustment`
 --
@@ -553,7 +562,7 @@ ALTER TABLE `rack`
 -- AUTO_INCREMENT for table `rack_level`
 --
 ALTER TABLE `rack_level`
-  MODIFY `level_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `reference`
 --
@@ -573,7 +582,7 @@ ALTER TABLE `stocks`
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `sup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
